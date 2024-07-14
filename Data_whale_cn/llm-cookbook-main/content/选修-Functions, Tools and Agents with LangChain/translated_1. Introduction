@@ -1,0 +1,29 @@
+# Chapter 1 Introduction
+
+Welcome to the course "Functions, Tools, and Agents Using LangChain", let's start this learning together!
+
+This tutorial is launched by LangChain founder Harrison Chase in cooperation with DeepLearning.AI. It will introduce how to use OpenAI's API and use LangChain Expression Language (LCEL) to build Agents.
+
+## 1. Background
+
+With the rapid development of large models, LLM has shown its powerful ability to interact with humans using natural language.
+
+Now people are not limited to using LLM to generate text content, but hope to interact with existing software infrastructure, such as being able to autonomously determine the call of functions and flexibly call code as subroutines. This can be used to process some formatted data, which is sometimes not well understood by LLM, such as the value of JSON formatted data, not just pure text.
+
+## 2. Basic content of the course
+
+LangChain is an open source framework for building large model applications. It builds a bridge between developers and LLMs, and can support multiple LLMs models, vector storage and other functions. LangChain has also been introduced in previous courses.
+
+This course is mainly in line with the trend of LLMs.The API function calls of in and ChatGPT have been updated, using a new syntax called `LangChain Expression Language (LCEL)` to build dialogue agents for tasks such as tagging, extraction, tool selection and routing.
+
+In this course, the main contents are as follows
+
+1. Introduce the new function of OpenAI's API call, which can format the output format.
+
+2. Learn the development of LangChain expression language LCEL (Langchain Expression Language), which simplifies the process of combining components or chains.
+
+3. Learn how to apply functions to tasks such as tagging and data extraction
+
+4. Use LangChain tools and LLMs functions to build a powerful dialogue agent (Agent) that can flexibly select tools for reasoning.
+
+By using these tools and functions, we can let the agent perform complex multi-step reasoning and automatically select tools to solve problems, enhance the intelligence of the agent, let us explore the powerful capabilities of the agent together!

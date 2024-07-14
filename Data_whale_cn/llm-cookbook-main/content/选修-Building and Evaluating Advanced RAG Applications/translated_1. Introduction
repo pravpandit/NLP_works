@@ -1,0 +1,23 @@
+# Chapter 1 Introduction
+
+This course explores in depth how to use Retrieval-Augmented Generation (RAG) technology to enable large language models (LLMs) to answer questions on user-owned data. The goal of this course is to introduce the key technologies and evaluation frameworks required to build and implement high-quality RAG systems.
+
+## 1. Background
+In this course, we first explore the importance of RAG technology, which provides highly relevant contextual information to LLMs through effective retrieval technology to generate accurate answers. In addition, we will also introduce how to efficiently iterate and improve RAG systems during initial development and post-deployment maintenance through an effective evaluation framework.
+
+## 2. Course Content Overview
+- **Advanced Retrieval Methods**: Introduces two advanced retrieval methods - sentence window retrieval and automatic merge retrieval, which can provide better contextual information for LLMs than traditional methods.
+- **Evaluation Metrics**: Explains how to use three evaluation metrics (context relevance, reasoning, and answer relevance) to evaluate the performance of LLM question answering systems.
+- **Practical Application**: The second half of this course will provide practical operations, teach how to use these retrieval methods and evaluation methods to iteratively optimize the RAG system, and show how to use systematic experimental tracking to establish a baseline and quickly improve.
+
+## III. Expert GuidanceGuide
+- **Jerry Liu**: As co-founder and CEO of LlamaIndex, Jerry will share his insights on the evolution of RAG practice on social media.
+- **Anupam Datta**: As co-founder and chief scientist of TruEra, Anupam will provide deep insights into the course with his more than ten years of research experience in the field of trusted AI and how to monitor, evaluate and optimize the effects of AI applications.
+
+## IV. Course Highlights
+- **Sentence Window Retrieval and Automatic Merge Retrieval**: These two methods optimize the contextual understanding ability of LLM by providing more coherent text blocks.
+- **RAG Triple Evaluation System**: A set of effective metrics are introduced to evaluate the performance of RAG systems in retrieval, understanding and generating answers.
+- **Practical Operation**: The course will allow students to personally practice these advanced retrieval and evaluation methods through code demonstrations and actual cases.
+
+## 5. Acknowledgements
+Thanks to all the people who participated in the creation of this course, including Logan Markehwich from the LlamaIndex team, Shayak Sen, Joshua Reini, Barbara Lewis from the TruEra team, and Eddie Shyu and Dialla Ezzeddine from the DeepLearning.ai team.

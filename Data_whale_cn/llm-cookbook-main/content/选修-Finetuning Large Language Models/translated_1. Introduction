@@ -1,0 +1,21 @@
+# Chapter 1 Introduction
+
+**Author Professor Andrew Ng**
+
+Welcome to the LLM Fine-tuning course taught by Sharon Zhou. When I visit different research groups, I often hear people ask: How can I use these LLMs in my own data or tasks? You may already know how to create prompts for LLMs. This course will introduce another important tool: fine-tuning of LLMs.
+
+## 1. Prompt Engineering and Fine-tuning
+
+Specifically, fine-tuning is to take the open source LLM and further train it on your own data. Although writing prompts can be a good way to make LLMs follow instructions and perform tasks such as extracting keywords or classifying text into positive or negative sentiments.
+
+If you fine-tune, you can make LLMs more stable to complete the tasks you want. I found it challenging to write prompts to make LLMs speak in a certain style, such as being more helpful or polite, or being concise rather than verbose to a certain extent.
+
+Fine-tuning is also a good way to adjust the tone of LLMs. People are now aware of the amazing ability of ChatGPT and other popular LLMs to conduct large-scale Q&A on specific topics. However, individuals and companies also want to have the same connection and interface to their own private and proprietary data. One way to do this is to train an LLM with your data. Of course, starting an LLM from scratch requires a huge amount of data, perhaps hundreds of billions or even billions of words.To over a trillion words of data, a lot of GPU computing resources are required.
+
+But with fine-tuning, you can take an existing LLM and further train it on your own data.
+
+## 2. Basic content of the course
+
+But with fine-tuning, you can take an existing LLM and further train it on your own data. So in this course, you will learn what fine-tuning is, when fine-tuning will help your application, how fine-tuning fits into training, how fine-tuning differs from cue word engineering or retrieval-augmented generation, and how to use these techniques in conjunction with fine-tuning techniques. You will also dive into a special variant of fine-tuning that makes GPT3 ChatGPT. It is called instruction fine-tuning, which allows the LLM to follow instructions.
+
+This course took a lot of effort. We would like to thank the entire Laminar team, especially Nina Wei on design, and Tommy Nelson and Jeff Lodwig of deeplearning.ai. In about an hour or so, through this short course, you will dive into how to build your own LLM by fine-tuning an existing LLM on your own data. let's start.

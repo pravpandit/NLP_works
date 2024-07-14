@@ -1,0 +1,31 @@
+# Chapter 1 Introduction
+
+Welcome to Part 3: Developing Applications Based on LangChain!
+
+This tutorial is jointly launched by LangChain founder Harrison Chase and DeepLearning.AI to help you master this powerful large language model application development framework.
+
+## 1. The Birth and Development of LangChain
+
+By giving prompts to LLMs or large language models, AI applications can now be developed faster than ever before, but an application may require multiple rounds of prompts and parsing outputs.
+
+There is a lot of repetitive code to write in this process. Based on this demand, Harrison Chase created LangChain to make the development process smoother.
+
+The LangChain open source community is growing rapidly, with hundreds of contributors, and is updating code and features at an astonishing rate.
+
+## 2. Basic Content of the Course
+
+LangChain is an open source framework for building large model applications, with two different versions of packages in Python and JavaScript. LangChain is also an open source project with an active community and rapid iteration of new features. LangChain is based on modular composition, with many individual components that can be used together or separately.
+
+This module will focus on the commonUse components:
+
+- Models: integrate various language models and vector models.
+
+- Prompts: provide instructions to the model.
+
+- Indexes: provide data retrieval functions.
+
+- Chains: combine components to achieve end-to-end applications.
+
+- Agents: expand the reasoning ability of the model.
+
+By learning to use these components to build chain applications, you will be able to quickly get started with LangChain and develop powerful language model programs. Let's start exploring the charm of LangChain!

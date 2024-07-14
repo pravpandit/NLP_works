@@ -1,0 +1,39 @@
+# Evaluating and Debugging Generative AI
+
+## Introduction
+
+Welcome to the course Evaluating and Debugging Generative AI 👏🏻👏🏻
+
+Developed by Carey Phelps (Lead Product Manager at Weights & Biases) in collaboration with Deeplearning.ai, this course aims to provide a systematic approach and tools to help you effectively track and debug generative AI models.
+
+In the process of building machine learning systems, it can become complex to manage and track all the data, models, and hyperparameters. This complexity can increase further as the size of the team grows. Generative AI models add a layer of complexity compared to supervised learning models because their outputs are complex, so they can be more difficult to evaluate.
+
+This course will use tools from Weights & Biases, an easy-to-use and flexible toolset that has become the industry standard for tracking machine learning experiments. This course covers large language models for text generation and diffusion models for image generation.
+
+## Course Content
+
+In this course, we will focus on the following:
+
+1. How to track and visualize experiments
+
+2. How to monitor diffusion models
+
+3. How to evaluate and fine-tune large language models (LLMs)
+
+You will learn a range of debugging and evaluation tools, including:
+
+- Experiments: for tracking machine learning experiments
+
+- Artifacts: for versioning and storing datasets and models
+- Tables: for visualizing and inspecting predictions made by models
+- Reports: for collaborating and sharing experimental results
+- Model Registry: for managing the lifecycle of models
+- Prompts: for evaluating large language model generation
+
+These tools work with popular frameworks and computing platforms such as Python, TensorFlow, or PyTorch.
+
+## Acknowledgements
+
+We would like to thank Darek Kleczek and Thomas Capelle of Weights & Biases, and Geoff Ludwig and Tommy Nelson of Deeplearning.ai for their contributions to this course.
+
+After completing this course, you will understand the best practices for evaluating and debugging generative AI, and will master a set of tools for systematically evaluating and debugging generative AI projects. We look forward to your participation and hope that you will benefit from this course and drive greater success in your machine learning projects.

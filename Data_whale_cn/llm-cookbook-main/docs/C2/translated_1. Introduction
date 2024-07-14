@@ -1,0 +1,13 @@
+# Chapter 1 Introduction
+
+Welcome to "Part 2: Building a Question-Answering System Based on ChatGPT"!
+
+This part is based on the course "Building Systems with the ChatGPT API" developed by Professor Andrew Ng and OpenAI, and aims to guide developers to build intelligent question-answering systems based on ChatGPT API.
+
+Using ChatGPT is not just a single prompt or a single model call. This course will **share the best practices for building complex applications using LLM**.
+
+The course will take the customer service assistant system as an example to explain how to implement complex question-answering and reasoning functions by chaining language models and combining multiple prompts. We will discuss key issues such as prompt selection strategies, information retrieval techniques, and system output detection.
+
+This course **focuses on engineering best practices, enabling you to systematically build a robust question-answering system**. We will also share methods for evaluating and continuously optimizing the system to achieve long-term performance improvements.
+
+By studying this course, you will master the core skills of using language models to build practical application systems. Let's start exploring the mystery of language models coming to life in practical applications!

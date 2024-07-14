@@ -1,0 +1,1 @@
+Stores images of non-text parts such as prefaces and environment configurations

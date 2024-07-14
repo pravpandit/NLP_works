@@ -81,5 +81,5 @@ def translate_files_in_directory(root_dir, src_lang='zh-CN', dest_lang='en'):
                 print(f"Translated {input_path} to {output_path}")
 
 # Example usage
-root_directory = r'D:\NLP_works\Data_whale_cn\llm-cookbook-main'  # Path to the root directory containing notebooks and markdown files
+root_directory = r'D:\NLP_works\Data_whale_cn\llms-from-scratch-cn-main'  # Path to the root directory containing notebooks and markdown files
 translate_files_in_directory(root_directory, src_lang='zh-CN', dest_lang='en')

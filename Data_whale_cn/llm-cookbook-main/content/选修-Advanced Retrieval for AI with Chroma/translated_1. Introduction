@@ -1,0 +1,27 @@
+# Advanced Retrieval Techniques Based on Chroma
+
+## Introduction
+
+Welcome to the Advanced Retrieval Techniques Based on Chroma course👏🏻👏🏻
+
+This course is jointly developed by Anton Troynikov (co-founder of Chroma) and Deeplearning.ai. It aims to introduce advanced retrieval techniques based on `chroma` and improve the accuracy of retrieval results.
+
+RAG (Retrieval Augmented Generation), also known as retrieval enhanced generation, retrieves relevant texts to provide reference materials for the large language model (LLM), thereby improving the accuracy and reliability of LLM's answers on specific tasks.
+
+The problem with this approach is that the embedding model may find text with similar topics to the query, but it does not contain the answer we want, which interferes with the LLM's answer. To solve this problem, we can use the query expansion method. Method 1: Rephrase or rewrite the initial query in different ways to expand it into multiple queries; Method 2: Guess or give a reference answer to see if there is anything in our text collection that is more like the answer, rather than just distractors that are related to the query topic but do not contain the answer.
+
+Of course, query expansion is just one of the methods. After completing this course, you will learn more ways to enhance retrieval effects and build a more powerful AI system.
+
+## Course Content
+
+In this course, you will learn a series of knowledge and techniques:
+- Overview of embedding-based retrieval technology
+- Retrieval pitfalls - why simple vector retrieval sometimes fails
+- Query expansion
+- Reranking with cross encoders
+- Embedding Adaptors
+- Other technologies
+
+## Acknowledgements
+
+Finally, special thanks to Jeff Huber, Hammad Bashir, Liquan Pei, Ben Eggers of the Chroma team and Geoff Ladwig and Esmael Gargari of the DeepLearning.AI team for their contributions to this course.

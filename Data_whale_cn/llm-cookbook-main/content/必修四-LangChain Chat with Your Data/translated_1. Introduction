@@ -1,0 +1,32 @@
+# Chapter 1 Introduction
+
+This course was developed by Harrison Chase (LangChain author) in collaboration with Deeplearning.ai. The course will introduce how to use LangChain to have a conversation with your own data.
+
+## 1. Background
+Large Language Models (LLM), such as ChatGPT, can answer many different questions. However, the knowledge of large language models comes from their training data sets, and there is no information about users (such as users' personal data, the company's own data), nor information about the latest current events (articles or news published after the large model data is trained). Therefore, the answers that large models can give are relatively limited.
+
+If we can let the large model use the information in our own data to answer our questions based on the training data set, we can get more useful answers.
+
+## 2. Basic content of the course
+
+In this course, we learn how to use LangChain to have a conversation with our own data.
+
+LangChain is an open source framework for building large model applications, with two different versions of packages in Python and JavaScript. LangChain is based on modular composition, with many separate components that can be used together or separately. The components of LangChain include:
+
+- Prompts: to make the model perform operations=How to work with LangChain.
+- Models: large language models, conversation models, text representation models. Currently includes an integration of multiple models.
+- Indexes: a way to get data, which can be used in conjunction with models.
+- Chains: end-to-end functional implementation.
+- Agents: using models as inference engines
+
+In addition, LangChain has many application cases that help us understand how to combine these modular components in a chained manner to form more end-to-end applications. If you want to learn the basics of LangChain, you can learn the LangChain for LLM Application Development course.
+
+In this course, we will focus on the common use cases of LangChain: using LangChain to communicate with your own data. We will first introduce how to use the LangChain Document Loader to load documents from different data sources. Then, we will learn how to cut these documents into semantic paragraphs. This step looks simple, but different processing may have a great impact. Next, we briefly introduce semantic search and the basic methods of information retrieval - searching for answers to user-input questions.The method is simple, but it may not work in some cases. We will analyze these cases and provide solutions. Finally, we will introduce how to use the retrieved documents to let the large language model (LLM) answer questions about the documents.
+
+## 3. Thanks to the important contributors of the course
+
+Finally, special thanks to the contributors to this course content
+- Ankush Gola (LandChain)
+- Lance Martin (LandChain)
+- Geoff Ladwig (DeepLearning.AI)
+- Diala Ezzedine (DeepLearning.AI)

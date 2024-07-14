@@ -1,0 +1,17 @@
+# Chapter 1 Introduction
+
+**Author Professor Andrew Ng**
+
+Welcome to this course: Building Generative AI Applications with Gradio in Partnership with Hugging Face.
+
+The instructor of this course is Apolinario Passos, also known as Poli.
+
+## 1. Overview of Gradio
+
+Gradio is a quick and convenient way to demonstrate machine learning models directly in Python through a friendly web interface. In this course, we will learn *how to use it to build user interfaces for generative AI applications*. After building a machine learning or generative AI application, if you want to build a demo to show others, perhaps to get feedback and drive improvements to the system, or just because you think the system is cool, you want to demonstrate it: Gradio allows you to quickly achieve this goal through a Python interface program without writing any front-end, web page or JavaScript code.
+
+## 2. Basic Content of the Course
+
+In this course, you will see examples including *text summarization, named entity recognition, image description, image generation using diffusion models, and chatbots based on large language models*.
+
+For each of these applications, Poli shows you how to use Gradio to quickly build a really cool demo, and let others interact and experience it. The first lesson will build simple NLP tasks in an application, including summarization and named entity recognition. We are very grateful for the hard work of many people who contributed to this short course, including Omar Sanseviero, Pedro Cuenca, Philip Schmid, Amy Roberts, Sylvain Gugger, Patrick von Platen, and Suraj Patil from the Hugging Face team, and Eddie Shyu and Diala Ezzeddine from DeepLearning.ai.

@@ -1,0 +1,16 @@
+# Chapter 1, Introduction
+
+Welcome to the short course "Large Language Models with Semantic Search" created by **Andrew Ng and Cohere partners. The instructors for this course are **Jay Allamar and Luis Serrano**. Jay and Luis are both experienced machine learning engineers and educators. Jay is the co-author of the book "Hands-On Large Language Models". Luis is the author of "Grokking Machine Learning" and has also taught in the "Math for Machine Learning" course at DeepLearning.ai. At Cohere, Jay and Luis work with Neil Amir on a website called LLMU and have a lot of experience in teaching developers to use large language models (LLMs). In this course, we will learn how to incorporate LLMs into information search in our own applications. For example, let's say we run a website with a large number of articles, which can be imagined as similar to Wikipedia, or a website with a large number of e-commerce products. Now with LLMs, we can do more.
+
+First, we can letThe user asks a question, and the system searches a website or database to answer the question. Second, LLM can also make the search results more consistent with the meaning or semantics of the user's question.
+
+This course covers the following topics.
+1. We will learn how to use basic keyword search, also known as vocabulary search. This algorithm finds documents with the highest number of matching words to the query.
+
+2. Learn how to enhance keyword search using a method called Re-rank. As the name suggests, this algorithm ranks responses based on their relevance to the query.
+
+3. Learn a more advanced search method - Dense Retrival. This algorithm tries to search using the actual meaning or semantic meaning of the text. This method uses embeddings, a method that maps each piece of text into a word vector. At the same time, we will also build a brand new vector index from scratch.
+
+4. Similar to other models, search algorithms need to be properly evaluated. Therefore, we will also learn how to evaluate them effectively.
+
+5. Since LLMs can be used to generate answers, we will also learn how to plug search results into LLMs and let them generate answers based on these results. The use of embeddings for dense retrieval greatly improves the question-answering capabilities of LLMs, as it first searches and retrieves relevant documents and then generates answers based on this retrieved information.Now, let’s delve deeper and get into the next step of learning!

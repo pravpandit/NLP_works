@@ -1,0 +1,63 @@
+﻿# Chapter 1 Tutorial on Advanced Prompt Methods Introduction
+
+👨‍💻👨‍💻 Contributors: Zeng Haolong (Datawhale intended member - JLU AI graduate student) and Zou Yuheng (Datawhale member - University of International Business and Economics graduate student)
+
+🎉🎉 Welcome to this tutorial. Here, we will explore some cutting-edge prompt methods in depth, including their basic theories and code implementations. We will help you fully understand and master these methods by analyzing the key principles in detail and providing practical code examples.
+
+🚀🚀 This tutorial is an important part of the LLM practice course provided by Datawhale for developers.
+
+## 1. Tutorial Overview
+
+> Let us be empowered by artificial intelligence, not suppressed by it.
+
+Prompt Engineering for Large Language Models (LLMs) refers to guiding LLMs to generate more accurate, reliable and expected output content through carefully designed high-quality prompts, thereby achieving more efficient and intelligent information processing and decision-making.
+
+Datawhale offers a Chinese course on ChatGPT Prompt Engineering for developers, which is based on [Andrew Ng](https://www.andrewng.org/) and [IsaacThis tutorial is based on the [ChatGPT Prompt Engineering for Developers](https://www.deeplearning.ai/short-courses/chatgpt-prompt-engineering-for-developers/) course by ">&#8226;</span> Isafulf](https://twitter.com/isafulf). The previous course introduces how to build prompts for beginners in an easy-to-understand way and implement common functions such as summarization, inference, and transformation using OpenAI's API, which is the first step in learning LLM development. However, this is not enough if you want to delve into prompt engineering and fully utilize the potential of LLMs.
+
+🥳🥳 Therefore, this tutorial will focus on introducing the basic theory and code implementation of some cutting-edge prompt methods. We will help readers fully understand and master these cutting-edge prompt methods by deeply analyzing the key principles and providing practical code examples. After completing this tutorial, readers will be able to understand and apply these advanced prompt methods professionally and accurately. **The main contents of this tutorial include**:
+
+- **Chain of Thought and Self-Consistency**. The essence of Chain-of-Thought (CoT) is a discrete prompt learning.Improve the ability of LLMs to perform complex reasoning. Zero-shot chaining can work when there are few examples or difficulties in obtaining chaining prompts. Self-consistency extends the construction of chaining, which generates multiple chains and selects the final answer by majority voting. The self-consistency strategy exploits the idea that a complex reasoning problem can often lead to the same correct answer through multiple different ways of thinking.
+
+- **Hint Optimization Tool**. Use LLM to optimize input prompts. We usually need to follow some principles and strategies to create effective prompts that produce high-quality answers. In fact, we can also use these principles and strategies to effectively optimize prompts.
+
+- **Collaborative Reasoning and Action ReAct**. ReAct = Reason + Action = Reasoning + Action. The ReAct method guides LLM to generate reasoning text related to specific tasks, thereby triggering the action of searching or calling tools to improve the performance of question-answering tasks.
+
+- **Emotional Motivation Prompt**. LLMs may improve performance on certain question-answering tasks by understanding psychological emotional stimuli. Emotional stimulus prompts are simple and easy to use, and are worth trying and paying attention to in many cases.
+
+- **Step-Back Prompting**. A simple prompting technique called "step-back prompting" enables LLMs to abstract away instances that contain specific details.Visualize high-level concepts and key principles. Using the obtained high-level concepts and key principles to guide reasoning, LLMs significantly improve their ability to follow the correct reasoning path.
+
+- **Program-assisted LLM**. PAL: **Program-a**ided **Language Models use Python programs as intermediate reasoning steps, outsourcing the task of solving and computing to an external Python interpreter instead of relying entirely on the language model itself.
+
+- **Skeleton of Thought Prompt**. Skeleton of Thought (SoT) does not generate answers sequentially, but generates different parts of the answer in parallel. More specifically, when a question is given, SoT first guides LLM to build a skeleton of thought (multiple key points of thought), then performs batch decoding or parallel API calls to expand multiple key points in parallel, and finally summarizes the output results to obtain the final answer.
+
+## 2. Other Notes
+
+📢📢 In the process of making this tutorial, there are some well-known prompting methods that we did not include:
+
+- Generate knowledge prompts. Paper: [ACL 2022 - Generated Knowledge Prompting for Commonsense Reasoning](https://arxiv.org/abs/2110.08387). This approach generates knowledge from a language model and uses this knowledge as additional input when answering questions. This shows that LLMs can be a flexible source of external knowledge to improve commonsense reasoning. Reason not included: Step-Back Prompting is a more advanced approach that works similarly to generating background knowledge and foundational principles to facilitate reasoning.
+
+- Prompt Chaining. Prompt Chaining is a method of breaking down a task into multiple subtasks. After the subtasks are identified, the prompts for the subtasks are fed to the LLM and the results are used as part of the new prompt. Reason not included: Breaking down a task into well-defined subtasks can sometimes be difficult, and the difficulty of making good prompt chain examples can vary from problem to problem. Additionally, if the response to an early prompt is wrong, it can cause confusion in subsequent prompts.
+
+- There are some implementations of automatic prompt engineering, such as: [APE](https://openreview.net/forum?id=92gvk82DE-), [AutoPrompt](https://aclanthology.org/2020.emnlp-main.346.pdf), [PromptBreeder](https://arxiv.org/pdf/2309.16797.pdf), [PromptAgent](https://arxiv.org/abs/2310.16427), etc. Reasons for not being included: It is not as general, effective, and easy to use as imagined, and needs to be searched and optimized for specific tasks, which is still under research.
+
+- [Active Prompting](https://arxiv.org/pdf/2302.12246.pdf). A method for actively prompting LLM using thought chains. The first step is to choose whether to use a small number of CoT examples to query LLM. Then, k possible answers are generated for a set of training questions, and uncertainty is calculated based on these k answers (using inconsistency). Next, the most uncertain questions are selected for human annotation, and then each question is inferred using the new annotation paradigm. Reasons for not being included: There is a little improvement based on thought chain reasoning, and sometimes human-designed CoT reasoning is required for annotation, which is more troublesome.
+
+- [Least to Most Prompting (LtM)](https://openreview.net/forum?id=WZH7099tgfM). It will thinkThe chain prompting process (CoT prompting) goes a step further. Similar to the chain prompting process, the problem to be solved is broken down into a set of sub-problems that build on each other. In the second step, these sub-problems are solved one by one. Unlike chaining, the solutions to the previous sub-problems are fed into the prompts to try to solve the next problem. Reason not included: Similar to CoT.
+
+- [Directional Prompts](https://arxiv.org/pdf/2302.11520.pdf). A novel framework for guiding black-box LLMs towards specific desired outputs. Instead of directly adjusting the LLM, this approach generates auxiliary directional prompts for each input instance by training an adjustable policy LM. These prompts can serve as subtle, instance-specific hints and clues to guide the LLM to produce the desired results, such as including specific keywords in the generated summary. Reason not included: Complex to implement and not easy to use.
+
+- Some very complex hinting strategies, such as [ToT (Tree of Thoughts)](https://arxiv.org/abs/2305.10601), [PoT (Program of Thoughts)](https://openreview.net/forum?id=YfZ4ZPt8zd), [GoT (Graphof Thoughts）](https://arxiv.org/abs/2308.09687), [AoT (Algorithm of Thoughts）](https://arxiv.org/abs/2308.10379), etc. Reason for not being included: These methods are not widely applicable at present, and the implementation process is quite complicated. They are mainly used to study how to improve reasoning ability and refresh the highest scores in some benchmarks. For many existing tasks that GPT-3.5 Turbo and GPT-4 are already good at, such as creative writing, knowledge question answering, text summarization, sentiment analysis, and machine translation, deliberate search such as ToT may not be necessary.
+
+💻💻 Programming environment description of experimental code:
+
+- `Anaconda + Python 3.8.10` (Python version requires Python 3.7+)
+
+- Main dependent libraries: `openai==1.10.0`, `langchain==0.1.5`, `langchain-experimental==0.0.50`, `langchain-openai==0.0.5`, `numexpr==2.8.6`, `google-search-results==2.4.2`
+
+- LLM: `gpt-3.5-turbo-0125`
+
+📚📚 Prerequisites:
+
+- Understand the basic concepts related to LLMs, such as prompt learning, prompt engineering, instruction following, zero-shot/few-shot prompts, contextual learning, and retrieval-enhanced generation.
+
+- Understand the relevant knowledge of OpenAI API, including keys, key parameters, message types, etc., and be proficient in using Python openai library.

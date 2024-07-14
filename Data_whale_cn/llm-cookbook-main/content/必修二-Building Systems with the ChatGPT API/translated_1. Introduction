@@ -1,0 +1,20 @@
+# Use ChatGPT API to build a system
+
+## Introduction
+
+Welcome to the course "Use ChatGPT API to build a system" 👏🏻👏🏻
+
+This course is developed by Professor Andrew Ng and OpenAI, and aims to guide developers on how to build a complete intelligent question-answering system based on ChatGPT.
+
+### 📚 Basic content of the course
+
+Using ChatGPT is not just a single prompt or a single model call. This course will share the best practices for building complex applications using LLM.
+
+This course takes the construction of a customer service assistant as an example, using different prompts to chain language models. The specific prompt selection will depend on the output of the previous call, and sometimes it is necessary to find information from external sources.
+
+This course will focus on this topic, step by step to understand the construction steps inside the application, and share best practices in system evaluation and continuous improvement in the long term.
+
+### 🌹Thanks to key contributors
+
+Thanks to Andrew Kondrick, Joe Palermo, Boris Power, and Ted Sanders from the OpenAI team,
+and Geoff Ladwig, Eddie Shyu, and Tommy Nelson from the DeepLearning.ai team.

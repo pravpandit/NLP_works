@@ -1,0 +1,33 @@
+# Chapter 1 Introduction
+
+Welcome to Part 4: Accessing Personal Data with LangChain!
+
+This course is based on the LangChain Chat With your Data course developed by LangChain founder Harrison Chase and Deeplearning.ai. It will introduce how to use the LangChain framework to enable language models to access and apply the power of users' own data.
+
+## 1. Background
+
+Large Language Models (LLM), such as ChatGPT, can answer many different questions. However, the knowledge of large language models comes from their training data sets, and they do not have user information (such as users' personal data, companies' own data), nor do they have information about the latest current events (articles or news published after the large model data is trained). Therefore, the answers that large models can give are relatively limited.
+
+If we can **let the large model use the information in our own data to answer our questions based on the training data set**, we can get more useful answers.
+
+## 2. Basic Course Content
+
+**LangChain is an open source framework for building large model applications**, with two different versions of packages: Python and JavaScript. It consists of modular components.It can be used alone or in chains to achieve end-to-end applications.
+
+The components of LangChain include:
+
+- Prompts: A way to make the model perform operations.
+
+- Models: Large language models, dialogue models, text representation models. Currently, it includes the integration of multiple models.
+
+- Indexes: A way to obtain data, which can be used in conjunction with models.
+
+- Chains: End-to-end functional implementation.
+
+- Agents: Using models as inference engines
+
+This course will introduce a typical scenario for using LangChain - **Dialogue systems based on own data**. We first learn how to use LangChain's Document Loader to load documents from different data sources. Then, we learn how to cut these documents into semantic paragraphs. This step seems simple, but different processing may have a significant impact. Next, we explain the method of semantic search and information retrieval to obtain reference documents related to user questions. This method is simple, but it may not be used in some cases. We will analyze these situations and provide solutions. Finally, we introduce how to use the retrieved documents to let the large language model (LLM) answer questions about the documents.
+
+The entire process covers key links such as data import, information retrieval and question and answer generation. Readers canYou can learn how to use each component, and you can also practice the idea of ​​building a dialogue system as a whole. If you want to learn the basics of LangChain first, you can learn the content of "LangChain for LLM Application Development".
+
+This unit will help you master the language model application development skills using your own data. Let's start exploring the charm of personalized dialogue systems!
