@@ -1,0 +1,8 @@
+* [Directory](README.md)
+* [Chapter 1 Introduction](ch01/ch01.md)
+* [Chapter 2 CNN Basics](ch02/ch02.md)
+* [Chapter 3 Model Pruning](ch03/ch03.md)
+* [Chapter 4 Model Quantization](ch04/ch04.md)
+* [Chapter 5 Neural Network Architecture Search](ch05/ch05.md)
+* [Chapter 6 Knowledge Distillation](ch06/ch06.md)
+* [Chapter 7 Project Practice](ch07/ch07.md)

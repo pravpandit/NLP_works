@@ -1,0 +1,38 @@
+# Chapter 1 Introduction
+
+&emsp;&emsp;With the development of computing performance and storage space, devices can support larger deep learning models, some of which have millions (or even billions) of parameters.
+
+&emsp;&emsp;In recent theoretical research on neural networks, it is found that in the optimization process of deep learning neural networks, neurons will have two redundant situations. One is that different neurons work together to play the same role; the other is that they do not move during the optimization process and become redundant nodes.
+
+&emsp;&emsp;Using the idea of ​​equivalent networks, on the one hand, the same neurons can be aggregated into the same neuron, and only numerical transformation is required, so that one neuron can bear the numerical transformation; on the other hand, redundant neurons can be deleted without changing the overall performance of the network, which reduces the overall network calculation without changing the performance and may even improve it. This idea makes it possible to prune model neurons without changing the model performance, so the technology of model pruning is called **model pruning**.
+
+&emsp;&emsp;Similarly, the numerical storage of models in computers is generally floating point storage. In specific calculations, appropriately reducing the calculation accuracy does not affect the final result, but it can reduce the size of the model operation and the speed of calculation. This technology is called **model quantization**.
+
+&emsp;&emsp;There are other technologies such as distillation learning, neural network architecture search, etc.etc., which basically achieve the goal of making the model smaller while maintaining model performance from the perspective of model parameters and numerical storage. These technologies can be collectively referred to as **model compression technologies**. These model compression technologies help address the challenges posed by the growing complexity and resource requirements of modern neural networks. By reducing model size and improving operating efficiency, the model can deploy deep learning models on a variety of devices, providing possibilities for practical applications across various fields.
+
+## 1.1 Model Pruning
+
+&emsp;&emsp;Pruning is mainly about identifying and removing unnecessary connections, weights, and even entire neurons from deep learning models. By eliminating these redundant components, the model can become more compact, run faster, and be more memory-efficient while still maintaining high accuracy. It is generally recommended to start pruning with pruning weights, as this does not change the architecture of the model like pruning neurons. The essence of pruning weights is to set the weights of selected single parameters in the network to zero. These parameters will not be able to affect the reasoning of the model.
+
+## 1.2 Model Quantization
+
+&emsp;&emsp;Quantization is another technique that makes neural networks smaller, faster, and more efficient by reducing the precision of weights and biases. In traditional deep learning models, parameters such as weights and biases are often stored and processed using 32-bit floating point numbers (single precision), which provides high accuracy but requires a lot of memory and computing resources. Quantization solves this problem by representing these values ​​using fewer bits (e.g. 8 bits or even lower).. This reduces the memory footprint of the model and speeds up computation by leveraging hardware optimizations for integer operations.
+
+## 1.3 Knowledge Distillation
+
+&emsp;&emsp;Knowledge distillation is a technique for transferring knowledge from a large, complex model (often called a teacher model) to a smaller, simplified model (called a student model). The teacher model contains a large amount of information learned during the training of a large dataset. Distillation aims to refine this knowledge into a more compact and efficient form that can be easily deployed on resource-constrained devices or in scenarios with limited computing power.
+
+## 1.4 Neural Network Architecture Search
+
+&emsp;&emsp;Neural Network Architecture Search is a technique that uses machine learning to automatically search for the optimal network architecture without requiring a lot of manpower. By giving a search space, such as a given model architecture, range, and length, the model network design is converted into a search problem, and by designing a search strategy and an automated model evaluation method, a neural network architecture that meets the target in the given search space is automatically and quickly searched.
+
+## 1.5 Summary
+
+Model compression methods such as pruning, quantization, distillation, and neural architecture search provide effective solutions for removing network redundancy. The characteristics of different model compression methods are as follows:
+
+| Method | Description | Applicable level | Whether pre-trained model is required | Advantages | Disadvantages |
+|----------------|----------|----------|------------------------|------------|------|
+| Model pruning | Determine the significance of parameters, channels, filters, and convolutional layers, and prune unimportant parts|Convolutional layer, fully connected layer | Yes | Can significantly reduce the number of parameters, facilitating acceleration on hardware; structured pruning can make the network narrower, facilitating acceleration in storage space and computing speed | Unstructured pruning will cause irregular network structure, making it difficult to effectively accelerate; structured pruning may cause incompatibility with hardware platforms and poor flexibility |
+| Model quantization | Based on weight sharing and matrix approximation, reduce the number of storage bits for parameters and activation values, and reduce memory overhead | Convolutional layer, fully connected layer | Yes | Has good compression and network performance, short training time, and can obtain a small network with small storage, low computation and good network performance | Quantized weights and activations reduce the capacity of the network and the quality of feature maps. When quantized to special positions, it is easy to cause a decrease in prediction accuracy. In addition, it will introduce noise into the gradient information, making it more difficult to converge the training process based on the gradient descent method |
+| Knowledge distillation | Use the softmax classifier output as soft knowledge, as prior knowledge for training the student network | Convolutional layer, entire network | Yes | Simple to train, can significantly reduce the number of parameters, easy to combine with other compression methods to achieve greater compression | Long network training time,Need to train teacher and student models; special structures are difficult to use with convolution kernels and networks with small directions, and generalization is poor |
+| Neural Network Architecture Search | Explore different network structures through search algorithms to find the optimal model configuration. | All layers | No, train from scratch | Able to automatically discover high-performance, resource-efficient deep learning model architectures | Usually requires a lot of computing resources and time, and the results may be limited by the definition of the search space and the choice of search algorithm |

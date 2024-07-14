@@ -1,0 +1,28 @@
+# Chapter 1 Introduction
+
+Welcome to the LangChain Large Model Application Development Short Course👏🏻👏🏻
+
+This course was developed by Harrison Chase (LangChain author) in collaboration with Deeplearning.ai to teach everyone how to use this amazing tool.
+
+## 1. The Birth and Development of LangChain
+
+By giving prompts to LLMs or large language models, AI applications can now be developed faster than ever before, but an application may require multiple rounds of prompts and parsing outputs.
+
+There is a lot of glue code to write in this process, and based on this demand, Harrison Chase created LangChain to make the development process smoother.
+
+The LangChain open source community is growing rapidly, with hundreds of contributors, and is updating code and features at an astonishing rate.
+
+## 2. Basic content of the course
+
+LangChain is an open source framework for building large model applications, with two different versions of packages in Python and JavaScript. LangChain is based on modular combination and has many individual components that can be used together or separately. In addition, LangChain also has many application cases to help us understand how to combine these modular components in a chain to form more end-to-end applications.
+
+In this courseIn this course, we will introduce the common components of LandChain. Specifically, we will discuss the following aspects
+- Models
+- Prompts: ways to make models perform operations
+- Indexes: ways to obtain data, which can be used in conjunction with models
+- Chains: end-to-end functional implementation
+- Agents: using models as inference engines
+
+## 3. Acknowledgements to important contributors to the course
+
+Finally, special thanks to Ankush Gholar (co-author of LandChain), Geoff Ladwig, Eddy Shyu and Diala Ezzedine, who also contributed a lot to the content of this course~
