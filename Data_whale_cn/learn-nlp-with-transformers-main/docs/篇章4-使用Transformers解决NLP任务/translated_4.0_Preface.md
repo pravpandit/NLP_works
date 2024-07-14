@@ -1,0 +1,2 @@
+This chapter will focus on how to use the Transformer model to solve various NLP tasks. Due to the different characteristics of different tasks, more Transformer models besides BERT will be involved.
+I hope that after studying this chapter, readers will be familiar with mainstream NLP tasks and can use the most cutting-edge Transformer model to solve them.
