@@ -1,0 +1,1445 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "id": "08879154",
+   "metadata": {
+    "pycharm": {
+     "name": "#%% md\n"
+    }
+   },
+   "source": [
+    "# अध्याय 6 पाठ रूपांतरण"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "c885ce7b",
+   "metadata": {
+    "pycharm": {
+     "name": "#%% md\n"
+    }
+   },
+   "source": [
+    "<div class='toc'>\n",
+    "<उल क्लास='टोक-आइटम'>\n",
+    "<li><span><a href='#一 परिचय' data-toc-modified-id='1. परिचय'>1. परिचय</a></span></li>\n",
+    "<ली>\n",
+    "<span><a href=”#二字典” data-toc-modified-id=”二. टेक्स्ट अनुवाद”>二. टेक्स्ट अनुवाद</a></span>\n",
+    "<उल क्लास='टोक-आइटम'>\n",
+    "<li><span><a href='#21-चीनी से स्पेनिश' डेटा-टोक-संशोधित-id='2.1 चीनी से स्पेनिश'>2.1 चीनी से स्पेनिश</a></span></li>\n",
+    "<li><span><a href=”#22-पहचान भाषा” data-toc-modified-id=”2.2 पहचान भाषा”>2.2 पहचान भाषा</a></span></li>\n",
+    "<li><span><a href='#23-बहुभाषी अनुवाद' data-toc-modified-id='2.3 बहुभाषी अनुवादlation\">2.3 बहुभाषी अनुवाद</a></span></li>\n",
+    "<li><span><a href='#24-एक साथ टोन रूपांतरण' data-toc-modified-id='2.4 एक साथ टोन रूपांतरण'>2.4 एक साथ टोन रूपांतरण</a></span></li>\n",
+    "<li><span><a href='#25-यूनिवर्सल ट्रांसलेटर' डेटा-टोक-संशोधित-id='2.5 यूनिवर्सल ट्रांसलेटर'>2.5 यूनिवर्सल ट्रांसलेटर</a></span></li>\n",
+    "</ul>\n",
+    "</li>\n",
+    "<li><span><a href='#तीन टोन और लेखन शैली समायोजन' data-toc-modified-id='तीन, टोन और लेखन शैली समायोजन'>तीन, टोन और राइटिंगआईटीईंग शैली समायोजन</a></span></li>\n",
+    "<li><span><a href='#चार फ़ाइल स्वरूप रूपांतरण' data-toc-modified-id='चार. फ़ाइल स्वरूप रूपांतरण'>चार. फ़ाइल स्वरूप रूपांतरण</a></span></li>\n",
+    "<li><span><a href='#पांच, वर्तनी और व्याकरण सुधार' data-toc-modified-id='पांच, वर्तनी और व्याकरण सुधार'>पांच, वर्तनी और व्याकरण सुधार</a></span>< /ली>\n",
+    "<li><span><a href=”#छह व्यापक उदाहरण” data-toc-modified-id=”छह, व्यापक उदाहरण”>छह, व्यापक उदाहरण</a></span></li></ul>\n",
+    "</div>"
+   ]
+  },
+  {
+   "attachments": {},
+   "cell_type": "markdown",
+   "id": "78624add",
+   "metadata": {
+    "pycharm": {
+     "name": "#%% md\n"
+    }
+   },
+   "source": [
+    "## I. प्रस्तावना"
+   ]
+  },
+  {
+   "attachments": {},
+   "cell_type": "markdown",
+   "id": "2fac57c2",
+   "metadata": {
+    "pycharm": {
+     "name": "#%% md\n"
+    }
+   },
+   "source": [
+    "एलएलएम इनपुट को विभिन्न प्रारूपों में परिवर्तित करने में बहुत अच्छा है। विशिष्ट अनुप्रयोगों में बहुभाषी पाठ अनुवाद, वर्तनी और व्याकरण सुधार, टोन समायोजन, प्रारूप रूपांतरण आदि शामिल हैं।\n",
+    "\n",
+    "यह अध्याय \"पाठ रूपांतरण\" फ़ंक्शन को लागू करने के लिए एपीआई इंटरफेस को कॉल करने के लिए प्रोग्रामिंग विधियों का उपयोग करने का तरीका बताएगा।"
+   ]
+  },
+  {
+   "attachments": {},
+   "cell_type": "markdown",
+   "id": "f7816496",
+   "metadata": {
+    "pycharm": {
+     "name": "#%% md\n"
+    }
+   },
+   "source": [
+    "सबसे पहले, हमें OpenAI पैकेज की आवश्यकता है, हमारी API कुंजी लोड करें, और getCompletion फ़ंक्शन को परिभाषित करें।"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 5,
+   "id": "acf125be",
+   "metadata": {
+    "pycharm": {
+     "name": "#%%\n"
+    }
+   },
+   "outputs": [],
+   "source": [
+    "import openai\n",
+    "# तृतीय-पक्ष लाइब्रेरी आयात करें\n",
+    "import os\n",
+    "\n",
+    "openai.api_key  = \"sk-...\"\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 6,
+   "id": "ac57ad72",
+   "metadata": {
+    "pycharm": {
+     "name": "#%%\n"
+    }
+   },
+   "outputs": [],
+   "source": [
+    "def get_completion(prompt, model=\"gpt-3.5-turbo\", temperature=0): \n",
+    "    messages = [{\"role\": \"user\", \"content\": prompt}]\n",
+    "    response = openai.ChatCompletion.create(\n",
+    "        model=model,\n",
+    "        messages=messages,\n",
+    "        temperature=temperature, # 值越低则输出文本随机性越低\n",
+    "    )\n",
+    "    return response.choices[0].message[\"content\"]"
+   ]
+  },
+  {
+   "attachments": {},
+   "cell_type": "markdown",
+   "id": "bf3733d4",
+   "metadata": {
+    "pycharm": {
+     "name": "#%% md\n"
+    }
+   },
+   "source": [
+    "## 2. पाठ अनुवाद"
+   ]
+  },
+  {
+   "attachments": {},
+   "cell_type": "markdown",
+   "id": "1b418e32",
+   "metadata": {
+    "pycharm": {
+     "name": "#%% md\n"
+    }
+   },
+   "source": [
+    "### 2.1 चीनी को स्पैनिश में बदलें"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 7,
+   "id": "5b521646",
+   "metadata": {
+    "pycharm": {
+     "name": "#%%\n"
+    }
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Hola, me gustaría ordenar una licuadora.\n"
+     ]
+    }
+   ],
+   "source": [
+    "prompt = f\"\"\"\n",
+    "Translate the following English text to Spanish: \\ \n",
+    "```Hi, I would like to order a blender```\n",
+    "\"\"\"\n",
+    "response = get_completion(prompt)\n",
+    "print(response)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 8,
+   "id": "8a5bee0c",
+   "metadata": {
+    "pycharm": {
+     "name": "#%%\n"
+    },
+    "scrolled": true
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Hola, me gustaría ordenar una batidora.\n"
+     ]
+    }
+   ],
+   "source": [
+    "prompt = f\"\"\"\n",
+    "将以下中文翻译成西班牙语: \\ \n",
+    "```您好，我想订购一个搅拌机。```\n",
+    "\"\"\"\n",
+    "response = get_completion(prompt)\n",
+    "print(response)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "7e7be208",
+   "metadata": {
+    "pycharm": {
+     "name": "#%% md\n"
+    }
+   },
+   "source": []
+  },
+  {
+   "attachments": {},
+   "cell_type": "markdown",
+   "id": "e3e922b4",
+   "metadata": {
+    "pycharm": {
+     "name": "#%% md\n"
+    }
+   },
+   "source": [
+    "### 2.2 भाषा पहचान"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 9,
+   "id": "769b6e2e",
+   "metadata": {
+    "pycharm": {
+     "name": "#%%\n"
+    }
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "This language is French.\n"
+     ]
+    }
+   ],
+   "source": [
+    "prompt = f\"\"\"\n",
+    "Tell me which language this is: \n",
+    "```Combien coûte le lampadaire?```\n",
+    "\"\"\"\n",
+    "response = get_completion(prompt)\n",
+    "print(response)\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 10,
+   "id": "c2c66002",
+   "metadata": {
+    "pycharm": {
+     "name": "#%%\n"
+    }
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "这段文本是法语。\n"
+     ]
+    }
+   ],
+   "source": [
+    "prompt = f\"\"\"\n",
+    "请告诉我以下文本是什么语种: \n",
+    "```Combien coûte le lampadaire?```\n",
+    "\"\"\"\n",
+    "response = get_completion(prompt)\n",
+    "print(response)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "8a9477e9",
+   "metadata": {
+    "pycharm": {
+     "name": "#%% md\n"
+    }
+   },
+   "source": []
+  },
+  {
+   "attachments": {},
+   "cell_type": "markdown",
+   "id": "c1841354",
+   "metadata": {
+    "pycharm": {
+     "name": "#%% md\n"
+    }
+   },
+   "source": [
+    "### 2.3 बहुभाषी अनुवाद"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 11,
+   "id": "a53bc53b",
+   "metadata": {
+    "pycharm": {
+     "name": "#%%\n"
+    }
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "French: ```Je veux commander un ballon de basket```\n",
+      "Spanish: ```Quiero ordenar una pelota de baloncesto```\n",
+      "English: ```I want to order a basketball```\n"
+     ]
+    }
+   ],
+   "source": [
+    "prompt = f\"\"\"\n",
+    "Translate the following  text to French and Spanish\n",
+    "and English pirate: \\\n",
+    "```I want to order a basketball```\n",
+    "\"\"\"\n",
+    "response = get_completion(prompt)\n",
+    "print(response)\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 12,
+   "id": "b0c4fa41",
+   "metadata": {
+    "pycharm": {
+     "name": "#%%\n"
+    }
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "中文：我想订购一个篮球。\n",
+      "英文：I want to order a basketball.\n",
+      "法语：Je veux commander un ballon de basket.\n",
+      "西班牙语：Quiero pedir una pelota de baloncesto.\n"
+     ]
+    }
+   ],
+   "source": [
+    "prompt = f\"\"\"\n",
+    "请将以下文本分别翻译成中文、英文、法语和西班牙语: \n",
+    "```I want to order a basketball.```\n",
+    "\"\"\"\n",
+    "response = get_completion(prompt)\n",
+    "print(response)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "8d5022c7",
+   "metadata": {
+    "pycharm": {
+     "name": "#%% md\n"
+    }
+   },
+   "source": []
+  },
+  {
+   "attachments": {},
+   "cell_type": "markdown",
+   "id": "68723ba5",
+   "metadata": {
+    "pycharm": {
+     "name": "#%% md\n"
+    }
+   },
+   "source": [
+    "### 2.4 एक साथ स्वर रूपांतरण"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 13,
+   "id": "a4770dcc",
+   "metadata": {
+    "pycharm": {
+     "name": "#%%\n"
+    }
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Formal: ¿Le gustaría ordenar una almohada?\n",
+      "Informal: ¿Te gustaría ordenar una almohada?\n"
+     ]
+    }
+   ],
+   "source": [
+    "prompt = f\"\"\"\n",
+    "Translate the following text to Spanish in both the \\\n",
+    "formal and informal forms: \n",
+    "'Would you like to order a pillow?'\n",
+    "\"\"\"\n",
+    "response = get_completion(prompt)\n",
+    "print(response)\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 14,
+   "id": "2c52ca54",
+   "metadata": {
+    "pycharm": {
+     "name": "#%%\n"
+    }
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "正式语气：您是否需要订购一个枕头？\n",
+      "非正式语气：你想要订购一个枕头吗？\n"
+     ]
+    }
+   ],
+   "source": [
+    "prompt = f\"\"\"\n",
+    "请将以下文本翻译成中文，分别展示成正式与非正式两种语气: \n",
+    "```Would you like to order a pillow?```\n",
+    "\"\"\"\n",
+    "response = get_completion(prompt)\n",
+    "print(response)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "7b7f6c87",
+   "metadata": {
+    "pycharm": {
+     "name": "#%% md\n"
+    }
+   },
+   "source": []
+  },
+  {
+   "attachments": {},
+   "cell_type": "markdown",
+   "id": "b2dc4c56",
+   "metadata": {
+    "pycharm": {
+     "name": "#%% md\n"
+    }
+   },
+   "source": [
+    "### 2.5 यूनिवर्सल ट्रांसलेटर"
+   ]
+  },
+  {
+   "attachments": {},
+   "cell_type": "markdown",
+   "id": "54b00aa4",
+   "metadata": {
+    "pycharm": {
+     "name": "#%% md\n"
+    }
+   },
+   "source": [
+    "वैश्वीकरण और सीमा पार व्यापार के विकास के साथ, उपयोगकर्ता विभिन्न देशों से आ सकते हैं और विभिन्न भाषाओं का उपयोग कर सकते हैं, इसलिए, हमें प्रत्येक संदेश की भाषा की पहचान करने और लक्ष्य उपयोगकर्ता की मूल भाषा में अनुवाद करने के लिए एक सार्वभौमिक अनुवादक की आवश्यकता है अधिक सुविधाजनक सीमा-पार संचार प्राप्त करना।"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 15,
+   "id": "21f3af91",
+   "metadata": {
+    "pycharm": {
+     "name": "#%%\n"
+    }
+   },
+   "outputs": [],
+   "source": [
+    "user_messages = [\n",
+    "  \"La performance du système est plus lente que d'habitude.\",  # System performance is slower than normal         \n",
+    "  \"Mi monitor tiene píxeles que no se iluminan.\",              # My monitor has pixels that are not lighting\n",
+    "  \"Il mio mouse non funziona\",                                 # My mouse is not working\n",
+    "  \"Mój klawisz Ctrl jest zepsuty\",                             # My keyboard has a broken control key\n",
+    "  \"我的屏幕在闪烁\"                                             # My screen is flashing\n",
+    "]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 16,
+   "id": "5cb69e31",
+   "metadata": {
+    "pycharm": {
+     "name": "#%%\n"
+    }
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Original message (The language is French.): La performance du système est plus lente que d'habitude.\n",
+      "The performance of the system is slower than usual.\n",
+      "\n",
+      "시스템의 성능이 평소보다 느립니다. \n",
+      "\n",
+      "Original message (The language is Spanish.): Mi monitor tiene píxeles que no se iluminan.\n",
+      "English: \"My monitor has pixels that do not light up.\"\n",
+      "\n",
+      "Korean: \"내 모니터에는 밝아지지 않는 픽셀이 있습니다.\" \n",
+      "\n",
+      "Original message (The language is Italian.): Il mio mouse non funziona\n",
+      "English: \"My mouse is not working.\"\n",
+      "Korean: \"내 마우스가 작동하지 않습니다.\" \n",
+      "\n",
+      "Original message (The language is Polish.): Mój klawisz Ctrl jest zepsuty\n",
+      "English: \"My Ctrl key is broken\"\n",
+      "Korean: \"내 Ctrl 키가 고장 났어요\" \n",
+      "\n",
+      "Original message (The language is Chinese.): 我的屏幕在闪烁\n",
+      "English: My screen is flickering.\n",
+      "Korean: 내 화면이 깜박거립니다. \n",
+      "\n"
+     ]
+    }
+   ],
+   "source": [
+    "for issue in user_messages:\n",
+    "    prompt = f\"Tell me what language this is: ```{issue}```\"\n",
+    "    lang = get_completion(prompt)\n",
+    "    print(f\"Original message ({lang}): {issue}\")\n",
+    "\n",
+    "    prompt = f\"\"\"\n",
+    "    Translate the following  text to English \\\n",
+    "    and Korean: ```{issue}```\n",
+    "    \"\"\"\n",
+    "    response = get_completion(prompt)\n",
+    "    print(response, \"\\n\")\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 18,
+   "id": "6a884190",
+   "metadata": {
+    "pycharm": {
+     "name": "#%%\n"
+    }
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "原始消息 (法语): La performance du système est plus lente que d'habitude.\n",
+      "\n",
+      "中文翻译：系统性能比平时慢。\n",
+      "英文翻译：The system performance is slower than usual. \n",
+      "=========================================\n",
+      "原始消息 (西班牙语): Mi monitor tiene píxeles que no se iluminan.\n",
+      "\n",
+      "中文翻译：我的显示器有一些像素点不亮。\n",
+      "英文翻译：My monitor has pixels that do not light up. \n",
+      "=========================================\n",
+      "原始消息 (意大利语): Il mio mouse non funziona\n",
+      "\n",
+      "中文翻译：我的鼠标不工作\n",
+      "英文翻译：My mouse is not working \n",
+      "=========================================\n",
+      "原始消息 (这段文本是波兰语。): Mój klawisz Ctrl jest zepsuty\n",
+      "\n",
+      "中文翻译：我的Ctrl键坏了\n",
+      "英文翻译：My Ctrl key is broken \n",
+      "=========================================\n",
+      "原始消息 (中文): 我的屏幕在闪烁\n",
+      "\n",
+      "中文翻译：我的屏幕在闪烁\n",
+      "英文翻译：My screen is flickering. \n",
+      "=========================================\n"
+     ]
+    }
+   ],
+   "source": [
+    "import time\n",
+    "for issue in user_messages:\n",
+    "    time.sleep(20)\n",
+    "    prompt = f\"告诉我以下文本是什么语种，直接输出语种，如法语，无需输出标点符号: ```{issue}```\"\n",
+    "    lang = get_completion(prompt)\n",
+    "    print(f\"原始消息 ({lang}): {issue}\\n\")\n",
+    "\n",
+    "    prompt = f\"\"\"\n",
+    "    将以下消息分别翻译成英文和中文，并写成\n",
+    "    中文翻译：xxx\n",
+    "    英文翻译：yyy\n",
+    "    的格式：\n",
+    "    ```{issue}```\n",
+    "    \"\"\"\n",
+    "    response = get_completion(prompt)\n",
+    "    print(response, \"\\n=========================================\")"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "607cdcba",
+   "metadata": {
+    "pycharm": {
+     "name": "#%% md\n"
+    }
+   },
+   "source": []
+  },
+  {
+   "attachments": {},
+   "cell_type": "markdown",
+   "id": "6ab558a2",
+   "metadata": {
+    "pycharm": {
+     "name": "#%% md\n"
+    }
+   },
+   "source": [
+    "## 3. स्वर और लेखन शैली का समायोजन"
+   ]
+  },
+  {
+   "attachments": {},
+   "cell_type": "markdown",
+   "id": "b85ae847",
+   "metadata": {
+    "pycharm": {
+     "name": "#%% md\n"
+    }
+   },
+   "source": [
+    "लिखने का लहजा अक्सर दर्शकों के आधार पर बदलता रहता है। उदाहरण के लिए, काम के ईमेल के लिए, हमें अक्सर औपचारिक लहजे और लिखित शब्दों का उपयोग करने की आवश्यकता होती है, जबकि WeChat पर समान उम्र के दोस्तों के साथ बातचीत करते समय, हम अधिक आरामदायक और बोलचाल के लहजे का उपयोग कर सकते हैं। ."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 19,
+   "id": "d62ac977",
+   "metadata": {
+    "pycharm": {
+     "name": "#%%\n"
+    }
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Dear Sir/Madam,\n",
+      "\n",
+      "I hope this letter finds you well. My name is Joe, and I am writing to bring your attention to a specification document regarding a standing lamp. \n",
+      "\n",
+      "I kindly request that you take a moment to review the attached spec, as it contains important details about the standing lamp in question. \n",
+      "\n",
+      "Thank you for your time and consideration. I look forward to hearing from you soon.\n",
+      "\n",
+      "Sincerely,\n",
+      "Joe\n"
+     ]
+    }
+   ],
+   "source": [
+    "prompt = f\"\"\"\n",
+    "Translate the following from slang to a business letter: \n",
+    "'Dude, This is Joe, check out this spec on this standing lamp.'\n",
+    "\"\"\"\n",
+    "response = get_completion(prompt)\n",
+    "print(response)\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 20,
+   "id": "84ce3099",
+   "metadata": {
+    "pycharm": {
+     "name": "#%%\n"
+    }
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "尊敬的先生/女士，\n",
+      "\n",
+      "我是小羊，我希望能够向您确认一下我们部门需要采购的显示器尺寸是多少寸。上次我们交谈时，您提到了这个问题。\n",
+      "\n",
+      "期待您的回复。\n",
+      "\n",
+      "谢谢！\n",
+      "\n",
+      "此致，\n",
+      "\n",
+      "小羊\n"
+     ]
+    }
+   ],
+   "source": [
+    "prompt = f\"\"\"\n",
+    "将以下文本翻译成商务信函的格式: \n",
+    "```小老弟，我小羊，上回你说咱部门要采购的显示器是多少寸来着？```\n",
+    "\"\"\"\n",
+    "response = get_completion(prompt)\n",
+    "print(response)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "79da6b29",
+   "metadata": {
+    "pycharm": {
+     "name": "#%% md\n"
+    }
+   },
+   "source": []
+  },
+  {
+   "attachments": {},
+   "cell_type": "markdown",
+   "id": "98df9009",
+   "metadata": {
+    "pycharm": {
+     "name": "#%% md\n"
+    }
+   },
+   "source": [
+    "## 4. फ़ाइल स्वरूप रूपांतरण"
+   ]
+  },
+  {
+   "attachments": {},
+   "cell_type": "markdown",
+   "id": "0bf9c074",
+   "metadata": {
+    "pycharm": {
+     "name": "#%% md\n"
+    }
+   },
+   "source": [
+    "चैटजीपीटी विभिन्न प्रारूपों, जैसे जेएसओएन से एचटीएमएल, एक्सएमएल, मार्कडाउन इत्यादि के बीच कनवर्ट करने में बहुत अच्छा है। निम्नलिखित उदाहरण में, हमारे पास एक जेएसओएन है जिसमें रेस्तरां कर्मचारियों के नाम और ईमेल की एक सूची है, और हम इसे जेएसओएन से कनवर्ट करना चाहते हैं एचटीएमएल के लिए."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 21,
+   "id": "fad3f358",
+   "metadata": {
+    "pycharm": {
+     "name": "#%%\n"
+    }
+   },
+   "outputs": [],
+   "source": [
+    "data_json = { \"resturant employees\" :[ \n",
+    "    {\"name\":\"Shyam\", \"email\":\"shyamjaiswal@gmail.com\"},\n",
+    "    {\"name\":\"Bob\", \"email\":\"bob32@gmail.com\"},\n",
+    "    {\"name\":\"Jai\", \"email\":\"jai87@gmail.com\"}\n",
+    "]}"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 22,
+   "id": "7e904f70",
+   "metadata": {
+    "pycharm": {
+     "name": "#%%\n"
+    }
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "<!DOCTYPE html>\n",
+      "<html>\n",
+      "<head>\n",
+      "<style>\n",
+      "table {\n",
+      "  font-family: arial, sans-serif;\n",
+      "  border-collapse: collapse;\n",
+      "  width: 100%;\n",
+      "}\n",
+      "\n",
+      "td, th {\n",
+      "  border: 1px solid #dddddd;\n",
+      "  text-align: left;\n",
+      "  padding: 8px;\n",
+      "}\n",
+      "\n",
+      "tr:nth-child(even) {\n",
+      "  background-color: #dddddd;\n",
+      "}\n",
+      "</style>\n",
+      "</head>\n",
+      "<body>\n",
+      "\n",
+      "<h2>Restaurant Employees</h2>\n",
+      "\n",
+      "<table>\n",
+      "  <tr>\n",
+      "    <th>Name</th>\n",
+      "    <th>Email</th>\n",
+      "  </tr>\n",
+      "  <tr>\n",
+      "    <td>Shyam</td>\n",
+      "    <td>shyamjaiswal@gmail.com</td>\n",
+      "  </tr>\n",
+      "  <tr>\n",
+      "    <td>Bob</td>\n",
+      "    <td>bob32@gmail.com</td>\n",
+      "  </tr>\n",
+      "  <tr>\n",
+      "    <td>Jai</td>\n",
+      "    <td>jai87@gmail.com</td>\n",
+      "  </tr>\n",
+      "</table>\n",
+      "\n",
+      "</body>\n",
+      "</html>\n"
+     ]
+    }
+   ],
+   "source": [
+    "prompt = f\"\"\"\n",
+    "Translate the following python dictionary from JSON to an HTML \\\n",
+    "table with column headers and title: {data_json}\n",
+    "\"\"\"\n",
+    "response = get_completion(prompt)\n",
+    "print(response)\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "e1c7f30c",
+   "metadata": {
+    "pycharm": {
+     "name": "#%% md\n"
+    }
+   },
+   "source": [
+    "नीचे जैसा ही परिणाम"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 10,
+   "id": "f54e7398",
+   "metadata": {
+    "pycharm": {
+     "name": "#%%\n"
+    }
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "<table>\n",
+      "  <caption>resturant employees</caption>\n",
+      "  <thead>\n",
+      "    <tr>\n",
+      "      <th>name</th>\n",
+      "      <th>email</th>\n",
+      "    </tr>\n",
+      "  </thead>\n",
+      "  <tbody>\n",
+      "    <tr>\n",
+      "      <td>Shyam</td>\n",
+      "      <td>shyamjaiswal@gmail.com</td>\n",
+      "    </tr>\n",
+      "    <tr>\n",
+      "      <td>Bob</td>\n",
+      "      <td>bob32@gmail.com</td>\n",
+      "    </tr>\n",
+      "    <tr>\n",
+      "      <td>Jai</td>\n",
+      "      <td>jai87@gmail.com</td>\n",
+      "    </tr>\n",
+      "  </tbody>\n",
+      "</table>\n"
+     ]
+    }
+   ],
+   "source": [
+    "prompt = f\"\"\"\n",
+    "将以下Python字典从JSON转换为HTML表格，保留表格标题和列名：{data_json}\n",
+    "\"\"\"\n",
+    "response = get_completion(prompt)\n",
+    "print(response)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 11,
+   "id": "a0026f3c",
+   "metadata": {
+    "pycharm": {
+     "name": "#%%\n"
+    }
+   },
+   "outputs": [
+    {
+     "data": {
+      "text/html": [
+       "<table>\n",
+       "  <caption>resturant employees</caption>\n",
+       "  <thead>\n",
+       "    <tr>\n",
+       "      <th>name</th>\n",
+       "      <th>email</th>\n",
+       "    </tr>\n",
+       "  </thead>\n",
+       "  <tbody>\n",
+       "    <tr>\n",
+       "      <td>Shyam</td>\n",
+       "      <td>shyamjaiswal@gmail.com</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <td>Bob</td>\n",
+       "      <td>bob32@gmail.com</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <td>Jai</td>\n",
+       "      <td>jai87@gmail.com</td>\n",
+       "    </tr>\n",
+       "  </tbody>\n",
+       "</table>"
+      ],
+      "text/plain": [
+       "<IPython.core.display.HTML object>"
+      ]
+     },
+     "metadata": {},
+     "output_type": "display_data"
+    }
+   ],
+   "source": [
+    "from IPython.display import display, Markdown, Latex, HTML, JSON\n",
+    "display(HTML(response))"
+   ]
+  },
+  {
+   "attachments": {},
+   "cell_type": "markdown",
+   "id": "29b7167b",
+   "metadata": {
+    "pycharm": {
+     "name": "#%% md\n"
+    }
+   },
+   "source": [
+    "##5. वर्तनी एवं व्याकरण सुधार"
+   ]
+  },
+  {
+   "attachments": {},
+   "cell_type": "markdown",
+   "id": "22776140",
+   "metadata": {
+    "pycharm": {
+     "name": "#%% md\n"
+    }
+   },
+   "source": [
+    "वर्तनी और व्याकरण की जाँच और सुधार एक बहुत ही सामान्य आवश्यकता है, खासकर जब गैर-देशी भाषाओं का उपयोग किया जाता है, उदाहरण के लिए, किसी फोरम में पोस्ट करते समय या अंग्रेजी पेपर प्रकाशित करते समय, प्रूफरीडिंग एक बहुत महत्वपूर्ण बात है।\n",
+    "\n",
+    "निम्नलिखित उदाहरण वाक्यों की एक सूची देता है, जिनमें से कुछ में वर्तनी या व्याकरण संबंधी समस्याएं हैं और कुछ में नहीं। हम प्रत्येक वाक्य को लूप करते हैं और मॉडल से पाठ को सही करने के लिए कहते हैं, तो यह \"कोई त्रुटि नहीं मिली\" आउटपुट देता है यदि यह गलत है, तो यह सही आउटपुट देता हैected पाठ."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 23,
+   "id": "b7d04bc0",
+   "metadata": {
+    "pycharm": {
+     "name": "#%%\n"
+    }
+   },
+   "outputs": [],
+   "source": [
+    "text = [ \n",
+    "  \"The girl with the black and white puppies have a ball.\",  # The girl has a ball.\n",
+    "  \"Yolanda has her notebook.\", # ok\n",
+    "  \"Its going to be a long day. Does the car need it’s oil changed?\",  # Homonyms\n",
+    "  \"Their goes my freedom. There going to bring they’re suitcases.\",  # Homonyms\n",
+    "  \"Your going to need you’re notebook.\",  # Homonyms\n",
+    "  \"That medicine effects my ability to sleep. Have you heard of the butterfly affect?\", # Homonyms\n",
+    "  \"This phrase is to cherck chatGPT for spelling abilitty\"  # spelling\n",
+    "]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 24,
+   "id": "d48f8d3f",
+   "metadata": {
+    "pycharm": {
+     "name": "#%%\n"
+    }
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "The girl with the black and white puppies has a ball.\n",
+      "No errors found.\n",
+      "It's going to be a long day. Does the car need its oil changed?\n",
+      "There goes my freedom. They're going to bring their suitcases.\n",
+      "You're going to need your notebook.\n",
+      "That medicine affects my ability to sleep. Have you heard of the butterfly effect?\n",
+      "This phrase is to check chatGPT for spelling ability.\n"
+     ]
+    }
+   ],
+   "source": [
+    "for t in text:\n",
+    "    prompt = f\"\"\"Proofread and correct the following text\n",
+    "    and rewrite the corrected version. If you don't find\n",
+    "    and errors, just say \"No errors found\". Don't use \n",
+    "    any punctuation around the text:\n",
+    "    ```{t}```\"\"\"\n",
+    "    response = get_completion(prompt)\n",
+    "    print(response)\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 25,
+   "id": "1ef55b7b",
+   "metadata": {
+    "pycharm": {
+     "name": "#%%\n"
+    }
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "0 The girl with the black and white puppies has a ball.\n",
+      "1 Yolanda has her notebook.\n",
+      "2 It's going to be a long day. Does the car need its oil changed?\n",
+      "3 Their goes my freedom. There going to bring their suitcases.\n",
+      "4 You're going to need your notebook.\n",
+      "5 That medicine affects my ability to sleep. Have you heard of the butterfly effect?\n",
+      "6 This phrase is to check chatGPT for spelling ability.\n"
+     ]
+    }
+   ],
+   "source": [
+    "for i in range(len(text)):\n",
+    "    time.sleep(20)\n",
+    "    prompt = f\"\"\"请校对并更正以下文本，注意纠正文本保持原始语种，无需输出原始文本。\n",
+    "    如果您没有发现任何错误，请说“未发现错误”。\n",
+    "    \n",
+    "    例如：\n",
+    "    输入：I are happy.\n",
+    "    输出：I am happy.\n",
+    "    ```{text[i]}```\"\"\"\n",
+    "    response = get_completion(prompt)\n",
+    "    print(i, response)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "ef7e1dae",
+   "metadata": {
+    "pycharm": {
+     "name": "#%% md\n"
+    }
+   },
+   "source": []
+  },
+  {
+   "attachments": {},
+   "cell_type": "markdown",
+   "id": "538181e0",
+   "metadata": {
+    "pycharm": {
+     "name": "#%% md\n"
+    }
+   },
+   "source": [
+    "निम्नलिखित एक सरल व्याकरण सुधार उदाहरण है (अनुवादक का नोट: व्याकरण के समान), इनपुट पाठ एक पांडा गुड़िया के बारे में एक समीक्षा है, और आउटपुट सही पाठ है इस उदाहरण में उपयोग किया गया संकेत अपेक्षाकृत सरल है, और आप भी कर सकते हैं आगे स्वर में परिवर्तन का अनुरोध करें।"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 26,
+   "id": "6696b06a",
+   "metadata": {
+    "pycharm": {
+     "name": "#%%\n"
+    }
+   },
+   "outputs": [],
+   "source": [
+    "text = f\"\"\"\n",
+    "Got this for my daughter for her birthday cuz she keeps taking \\\n",
+    "mine from my room.  Yes, adults also like pandas too.  She takes \\\n",
+    "it everywhere with her, and it's super soft and cute.  One of the \\\n",
+    "ears is a bit lower than the other, and I don't think that was \\\n",
+    "designed to be asymmetrical. It's a bit small for what I paid for it \\\n",
+    "though. I think there might be other options that are bigger for \\\n",
+    "the same price.  It arrived a day earlier than expected, so I got \\\n",
+    "to play with it myself before I gave it to my daughter.\n",
+    "\"\"\""
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 27,
+   "id": "8f3b2341",
+   "metadata": {
+    "pycharm": {
+     "name": "#%%\n"
+    }
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Got this for my daughter for her birthday because she keeps taking mine from my room. Yes, adults also like pandas too. She takes it everywhere with her, and it's super soft and cute. However, one of the ears is a bit lower than the other, and I don't think that was designed to be asymmetrical. Additionally, it's a bit small for what I paid for it. I believe there might be other options that are bigger for the same price. On the positive side, it arrived a day earlier than expected, so I got to play with it myself before I gave it to my daughter.\n"
+     ]
+    }
+   ],
+   "source": [
+    "prompt = f\"proofread and correct this review: ```{text}```\"\n",
+    "response = get_completion(prompt)\n",
+    "print(response)\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "63871b58",
+   "metadata": {
+    "pycharm": {
+     "name": "#%% md\n"
+    }
+   },
+   "source": [
+    "नीचे जैसा ही परिणाम"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 14,
+   "id": "50cca36e",
+   "metadata": {
+    "pycharm": {
+     "name": "#%%\n"
+    }
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "I got this for my daughter's birthday because she keeps taking mine from my room. Yes, adults also like pandas too. She takes it everywhere with her, and it's super soft and cute. However, one of the ears is a bit lower than the other, and I don't think that was designed to be asymmetrical. It's also a bit smaller than I expected for the price. I think there might be other options that are bigger for the same price. On the bright side, it arrived a day earlier than expected, so I got to play with it myself before giving it to my daughter.\n"
+     ]
+    }
+   ],
+   "source": [
+    "prompt = f\"校对并更正以下商品评论：```{text}```\"\n",
+    "response = get_completion(prompt)\n",
+    "print(response)"
+   ]
+  },
+  {
+   "attachments": {},
+   "cell_type": "markdown",
+   "id": "2e2d1f6a",
+   "metadata": {
+    "pycharm": {
+     "name": "#%% md\n"
+    }
+   },
+   "source": [
+    "त्रुटि सुधार प्रक्रिया को विस्तार से प्रदर्शित करने और तुलना करने के लिए ```रेडलाइन्स``` पैकेज आयात करें:"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "07f32f1f",
+   "metadata": {
+    "pycharm": {
+     "name": "#%%\n"
+    }
+   },
+   "outputs": [],
+   "source": [
+    "# यदि रेडलाइन्स इंस्टॉल नहीं है, तो आपको पहले इसे इंस्टॉल करना होगा\n",
+    "!pip3.8 install redlines"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 22,
+   "id": "e8604dfb",
+   "metadata": {
+    "pycharm": {
+     "name": "#%%\n"
+    }
+   },
+   "outputs": [
+    {
+     "data": {
+      "text/markdown": [
+       "<span style=\"color:red;font-weight:700;text-decoration:line-through;\">Got </span><span style=\"color:red;font-weight:700;\">I got </span>this for my <span style=\"color:red;font-weight:700;text-decoration:line-through;\">daughter for her </span><span style=\"color:red;font-weight:700;\">daughter's </span>birthday <span style=\"color:red;font-weight:700;text-decoration:line-through;\">cuz </span><span style=\"color:red;font-weight:700;\">because </span>she keeps taking mine from my <span style=\"color:red;font-weight:700;text-decoration:line-through;\">room.  </span><span style=\"color:red;font-weight:700;\">room. </span>Yes, adults also like pandas <span style=\"color:red;font-weight:700;text-decoration:line-through;\">too.  </span><span style=\"color:red;font-weight:700;\">too. </span>She takes it everywhere with her, and it's super soft and <span style=\"color:red;font-weight:700;text-decoration:line-through;\">cute.  One </span><span style=\"color:red;font-weight:700;\">cute. However, one </span>of the ears is a bit lower than the other, and I don't think that was designed to be asymmetrical. It's <span style=\"color:red;font-weight:700;\">also </span>a bit <span style=\"color:red;font-weight:700;text-decoration:line-through;\">small </span><span style=\"color:red;font-weight:700;\">smaller than I expected </span>for <span style=\"color:red;font-weight:700;text-decoration:line-through;\">what I paid for it though. </span><span style=\"color:red;font-weight:700;\">the price. </span>I think there might be other options that are bigger for the same <span style=\"color:red;font-weight:700;text-decoration:line-through;\">price.  It </span><span style=\"color:red;font-weight:700;\">price. On the bright side, it </span>arrived a day earlier than expected, so I got to play with it myself before <span style=\"color:red;font-weight:700;text-decoration:line-through;\">I gave </span><span style=\"color:red;font-weight:700;\">giving </span>it to my daughter.\n"
+      ],
+      "text/plain": [
+       "<IPython.core.display.Markdown object>"
+      ]
+     },
+     "metadata": {},
+     "output_type": "display_data"
+    }
+   ],
+   "source": [
+    "from redlines import Redlines\n",
+    "from IPython.display import display, Markdown\n",
+    "\n",
+    "diff = Redlines(text,response)\n",
+    "display(Markdown(diff.output_markdown))"
+   ]
+  },
+  {
+   "attachments": {},
+   "cell_type": "markdown",
+   "id": "3ee5d487",
+   "metadata": {
+    "pycharm": {
+     "name": "#%% md\n"
+    }
+   },
+   "source": [
+    "## VI व्यापक उदाहरण\n",
+    "निम्नलिखित उदाहरण एक ही समय में पाठ अनुवाद + वर्तनी सुधार + शैली समायोजन + प्रारूप रूपांतरण करने के लिए संकेत का उपयोग करते हुए एक ही टिप्पणी दिखाता है।"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 23,
+   "id": "584dcc21",
+   "metadata": {
+    "pycharm": {
+     "name": "#%%\n"
+    }
+   },
+   "outputs": [],
+   "source": [
+    "text = f\"\"\"\n",
+    "Got this for my daughter for her birthday cuz she keeps taking \\\n",
+    "mine from my room.  Yes, adults also like pandas too.  She takes \\\n",
+    "it everywhere with her, and it's super soft and cute.  One of the \\\n",
+    "ears is a bit lower than the other, and I don't think that was \\\n",
+    "designed to be asymmetrical. It's a bit small for what I paid for it \\\n",
+    "though. I think there might be other options that are bigger for \\\n",
+    "the same price.  It arrived a day earlier than expected, so I got \\\n",
+    "to play with it myself before I gave it to my daughter.\n",
+    "\"\"\""
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "83235c7b",
+   "metadata": {
+    "pycharm": {
+     "name": "#%%\n"
+    }
+   },
+   "outputs": [],
+   "source": [
+    "prompt = f\"\"\"\n",
+    "proofread and correct this review. Make it more compelling. \n",
+    "Ensure it follows APA style guide and targets an advanced reader. \n",
+    "Output in markdown format.\n",
+    "Text: ```{text}```\n",
+    "\"\"\"\n",
+    "# प्रूफरीडिंग नोट: एपीए स्टाइल गाइड मनोविज्ञान और संबंधित क्षेत्रों में शोध पत्र लिखने और प्रारूपित करने के लिए नियमों का एक सेट है।\n",
+    "# इसमें पाठ का एक संक्षिप्त संस्करण शामिल है, जो त्वरित पढ़ने के लिए है, जिसमें उद्धरण, व्याख्याएं और एक संदर्भ सूची शामिल है,\n",
+    "# अधिक जानकारी के लिए, कृपया देखें: https://apastyle.apa.org/about-apa-style\n",
+    "# अगले सेल में चीनी त्वरित सामग्री को अनुवादक द्वारा स्थानीयकृत किया गया है और यह केवल संदर्भ के लिए है।\n",
+    "response = get_completion(prompt)\n",
+    "display(Markdown(response))\n"
+   ]
+  },
+  {
+   "attachments": {},
+   "cell_type": "markdown",
+   "id": "4bd30c51",
+   "metadata": {
+    "pycharm": {
+     "name": "#%% md\n"
+    }
+   },
+   "source": [
+    "**पांडा आलीशान खिलौने की समीक्षा**\n",
+    "\n",
+    "**परिचय**\n",
+    "\n",
+    "मैंने यह पांडा आलीशान खिलौना अपनी बेटी के लिए जन्मदिन के उपहार के रूप में खरीदा था, जो पांडा से उतना ही प्यार करती है जितना मैं करती हूं। यह खिलौना बहुत नरम और मनमोहक है, और मेरी बेटी इसे हर जगह अपने साथ ले जाना पसंद करती है। हालांकि, मुझे इसमें कुछ खामियां भी नजर आईं खिलौने का डिज़ाइन और आकार जिसने मुझे पैसे के लिए इसकी कीमत पर सवाल उठाने पर मजबूर कर दिया।\n",
+    "\n",
+    "**उपस्थिति और गुणवत्ता**\n",
+    "\n",
+    "खिलौने में यथार्थवादी काले और सफेद फर पैटर्न और उसके चेहरे पर एक सुंदर अभिव्यक्ति है। यह उच्च गुणवत्ता वाले मा से बना हैटेरियल जो स्पर्श करने पर चिकना और कोमल लगता है। इनमें से एक कान दूसरे की तुलना में थोड़ा नीचे है, जो इसे अधिक प्राकृतिक दिखाने के लिए एक विनिर्माण दोष या जानबूझकर विषमता हो सकता है। खिलौना भी काफी छोटा है, जिसकी माप लगभग 12 इंच है मुझे उम्मीद थी कि मैंने जो कीमत चुकाई है, उसके हिसाब से यह बड़ी होगी, क्योंकि मैंने अन्य आलीशान खिलौने देखे हैं जो बड़े और सस्ते हैं।\n",
+    "\n",
+    "**डिलीवरी और सेवा**\n",
+    "\n",
+    "खिलौना अनुमानित डिलीवरी तिथि से एक दिन पहले आ गया, जो एक सुखद आश्चर्य थाजब मुझे यह मिला तो यह अच्छी स्थिति में था। विक्रेता ने मेरी अगली खरीदारी के लिए एक धन्यवाद नोट और एक कूपन भी शामिल किया, जिसकी मैंने सराहना की।\n",
+    "\n",
+    "**निष्कर्ष**\n",
+    "\n",
+    "कुल मिलाकर, यह पांडा आलीशान खिलौना किसी भी पांडा प्रेमी, विशेषकर बच्चों के लिए एक प्यारा और प्यारा उपहार है। इसमें उच्च गुणवत्ता वाला अनुभव और आकर्षक उपस्थिति है, लेकिन इसके डिजाइन और आकार में कुछ छोटी खामियां भी हैं जो इसके मूल्य को प्रभावित कर सकती हैं। मैं इस खिलौने की सिफ़ारिश किसी ऐसे व्यक्ति को करूँगा जो छोटे और प्यारे पांडा आलीशान की तलाश में है, लेकिन नहींउन लोगों के लिए जो बड़ा और यथार्थवादी चाहते हैं।"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 24,
+   "id": "5061d6a3",
+   "metadata": {
+    "pycharm": {
+     "name": "#%%\n"
+    },
+    "scrolled": true
+   },
+   "outputs": [
+    {
+     "data": {
+      "text/markdown": [
+       "【优点】\n",
+       "- 超级柔软可爱，女儿生日礼物非常受欢迎。\n",
+       "- 成人也喜欢熊猫，我也很喜欢它。\n",
+       "- 提前一天到货，让我有时间玩一下。\n",
+       "\n",
+       "【缺点】\n",
+       "- 一只耳朵比另一只低，不对称。\n",
+       "- 价格有点贵，但尺寸有点小，可能有更大的同价位选择。\n",
+       "\n",
+       "【总结】\n",
+       "这只熊猫玩具非常适合作为生日礼物，柔软可爱，深受孩子喜欢。虽然价格有点贵，但尺寸有点小，不对称的设计也有点让人失望。如果你想要更大的同价位选择，可能需要考虑其他选项。总的来说，这是一款不错的熊猫玩具，值得购买。"
+      ],
+      "text/plain": [
+       "<IPython.core.display.Markdown object>"
+      ]
+     },
+     "metadata": {},
+     "output_type": "display_data"
+    }
+   ],
+   "source": [
+    "prompt = f\"\"\"\n",
+    "针对以下三个反引号之间的英文评论文本，\n",
+    "首先进行拼写及语法纠错，\n",
+    "然后将其转化成中文，\n",
+    "再将其转化成优质淘宝评论的风格，从各种角度出发，分别说明产品的优点与缺点，并进行总结。\n",
+    "润色一下描述，使评论更具有吸引力。\n",
+    "输出结果格式为：\n",
+    "【优点】xxx\n",
+    "【缺点】xxx\n",
+    "【总结】xxx\n",
+    "注意，只需填写xxx部分，并分段输出。\n",
+    "将结果输出成Markdown格式。\n",
+    "```{text}```\n",
+    "\"\"\"\n",
+    "response = get_completion(prompt)\n",
+    "display(Markdown(response))"
+   ]
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.10.11"
+  },
+  "latex_envs": {
+   "LaTeX_envs_menu_present": true,
+   "autoclose": false,
+   "autocomplete": true,
+   "bibliofile": "biblio.bib",
+   "cite_by": "apalike",
+   "current_citInitial": 1,
+   "eqLabelWithNumbers": true,
+   "eqNumInitial": 1,
+   "hotkeys": {
+    "equation": "Ctrl-E",
+    "itemize": "Ctrl-I"
+   },
+   "labels_anchors": false,
+   "latex_user_defs": false,
+   "report_style_numbering": false,
+   "user_envs_cfg": false
+  },
+  "toc": {
+   "base_numbering": 1,
+   "nav_menu": {},
+   "number_sections": true,
+   "sideBar": true,
+   "skip_h1_title": false,
+   "title_cell": "Table of Contents",
+   "title_sidebar": "Contents",
+   "toc_cell": false,
+   "toc_position": {},
+   "toc_section_display": true,
+   "toc_window_display": true
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}

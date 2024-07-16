@@ -7,7 +7,7 @@ def split_text(text, max_length=500):
     return [text[i:i + max_length] for i in range(0, len(text), max_length)]
 
 # Function to translate text using the deep-translator package
-def translate_text(text, src_lang='zh-CN', dest_lang='en'):
+def translate_text(text, src_lang='zh', dest_lang='hi'):
     translator = GoogleTranslator(source=src_lang, target=dest_lang)
     chunks = split_text(text)
     translated_chunks = []
@@ -25,7 +25,7 @@ def translate_text(text, src_lang='zh-CN', dest_lang='en'):
     return ''.join(translated_chunks)
 
 # Function to translate a Jupyter notebook
-def translate_notebook(input_path, output_path, src_lang='zh-CN', dest_lang='en'):
+def translate_notebook(input_path, output_path, src_lang='zh-CN', dest_lang='hi'):
     # Load the notebook
     with open(input_path, 'r', encoding='utf-8') as f:
         nb = nbformat.read(f, as_version=4)
@@ -50,7 +50,7 @@ def translate_notebook(input_path, output_path, src_lang='zh-CN', dest_lang='en'
         nbformat.write(nb, f)
 
 # Function to translate a markdown file
-def translate_markdown(input_path, output_path, src_lang='zh-CN', dest_lang='en'):
+def translate_markdown(input_path, output_path, src_lang='zh-CN', dest_lang='hi'):
     # Read the markdown file
     with open(input_path, 'r', encoding='utf-8') as f:
         content = f.read()
@@ -63,7 +63,7 @@ def translate_markdown(input_path, output_path, src_lang='zh-CN', dest_lang='en'
         f.write(translated_content)
 
 # Function to walk through directories and translate .ipynb and .md files
-def translate_files_in_directory(root_dir, src_lang='zh-CN', dest_lang='en'):
+def translate_files_in_directory(root_dir, src_lang='zh-CN', dest_lang='hi'):
     for dirpath, _, filenames in os.walk(root_dir):
         for filename in filenames:
             if filename.endswith('.ipynb') or filename.endswith('.md'):
@@ -72,7 +72,7 @@ def translate_files_in_directory(root_dir, src_lang='zh-CN', dest_lang='en'):
                 translated_filename = translate_text(filename, src_lang, dest_lang)
                 # Remove invalid characters from translated filename
                 valid_translated_filename = "".join(c if c.isalnum() or c in [' ', '.', '_'] else "_" for c in translated_filename)
-                output_filename = f"translated_{valid_translated_filename}"
+                output_filename = f"translated_hindi_{valid_translated_filename}"
                 output_path = os.path.join(dirpath, output_filename)
                 if filename.endswith('.ipynb'):
                     translate_notebook(input_path, output_path, src_lang, dest_lang)
@@ -81,5 +81,5 @@ def translate_files_in_directory(root_dir, src_lang='zh-CN', dest_lang='en'):
                 print(f"Translated {input_path} to {output_path}")
 
 # Example usage
-root_directory = r'Data_whale_cn/undingable-optimization-main'  # Path to the root directory containing notebooks and markdown files
-translate_files_in_directory(root_directory, src_lang='zh-CN', dest_lang='en')
+root_directory = r'D:\NLP_works\praveen_data'  # Path to the root directory containing notebooks and markdown files
+translate_files_in_directory(root_directory, src_lang='zh-CN', dest_lang='hi')

@@ -1,0 +1,280 @@
+#इतिहास
+
+यह **28 अप्रैल 2014** है, जिस दिन मार्टेन और एलेक्जेंडर को उम्मीद थी कि कुछ दोस्त और साथी उनकी 'लॉन्च' पार्टी के लिए कमरे में आने से 30 मिनट पहले आएंगे कैमरों और पत्रकारों से भरा हुआ, बहुत से लोग यह देखने और सुनने में रुचि रखते थे कि वे क्या लेकर आए थे, यहाँ तक कि पॉवन्यूज़ ने भी एक रिपोर्टर भेजा:
+
+[https://www.notion.so](https://www.notion.so)
+
+थोड़ा पीछे हटें: 2011 में, मार्टन ने खुद को एक किताब की दुकान में पाया, थोड़ा सावह एक पत्रिका को देखते हुए निराश हो गया (जैसा कि नीचे इस चित्र में खूबसूरती से दर्शाया गया है)। वह निराश था कि उसे पूरी पत्रिका खरीदनी पड़ी, जबकि वह उसमें से केवल एक लेख पढ़ना चाहता था, ब्लेंडल के लिए पहला विचार पैदा हुआ और उसे MyMagazine कहा गया उन्होंने मीडिया जगत में बहुत से लोगों से बात करना शुरू किया, जिनमें अलेक्जेंडर भी शामिल था, जो अभी भी आश्वस्त नहीं थे।
+
+![../Blendle's%20Employee%20Handbook%20627043432731449f85bf3624cbc13dc7/History%2029613779691d41b285c27156e574e0cc/marten.jpg](../Blendle's%20Employee%20Handbook%20627043432731449f85bf3624cbc13dc7/History%2029613779691d41b285c27156e574e0cc/marten.jpg)
+
+**2012 के मध्य** में, मार्टन ने जोर्ट को पहला स्केच और वायरफ्रेम बनाने के लिए कहा।
+
+**जून 2012**, ये ब्लेंडल के पहले रेखाचित्र हैं:
+
+![../Blendle's%20Employee%20Handbook%20627043432731449f85bf3624cbc13dc7/History%2029613779691d41b285c27156e574e0cc/Schetsen-van-juni-2012-960x698.png ](.. /ब्लेंडले%20कर्मचारी%20हैंडबुक%20627043432731449f85bf3624cbc13dc7/इतिहास%2029613779691d41b285c27156e574e0cc/शेत्सेन-वैन-जूनी-2012-960x698.png)
+
+![../Blendle's%20Employee%20Handbook%20627043432731449f85bf3624cbc13dc7/History%2029613779691d41b285c27156e574e0cc/screensh ot-trending-960x513.png](../Blendle 's% 20कर्मचारी%20हैंडबुक%20627043432731449f85bf3624cbc13dc7/इतिहास%2029613779691d41b285c27156e574e0cc/स्क्रीनशॉट-ट्रेंडिंग-960x513.png)
+
+अलेक्जेंडर और मार्टन संपर्क में रहते हैं और, पहले रेखाचित्रों को देखने के बाद, अलेक्जेंडर को क्षमता दिखती है और वे एक साथ शामिल होने का फैसला करते हैंएम्स्टर्डम में विज्ञान केंद्र निमो की सीढ़ी पर 'ऑफ़िस'। प्रोटोटाइप और अलेक्जेंडर के साथ, प्रकाशकों से बातचीत वास्तव में दिलचस्प होने लगती है और प्रकाशकों की सभी प्रतिक्रिया और आलोचना को उनके 'कार्यालय' में वापस ले जाती है। और उत्पाद में सुधार करते रहें।
+
+**सितंबर 2013 में,** ब्लेंडल को पत्रकारिता में नवाचार के लिए एक फंड से ****100,000 यूरो मिले।
+
+**5 सितंबर 2013:** डच टीवी शो डीडब्ल्यूडीडी में ब्लेंडल की पहली घोषणा:
+
+[एचटीtps://www.notion.so](https://www.notion.so)
+
+**28 अप्रैल 2014:** एनएल में लॉन्च
+
+इस बीच, ब्लेंडल को एक कार्यालय का उन्नयन मिला और वह खूबसूरत यूट्रेक्ट में जार्बेर्स में चला गया, यह नीचे दी गई तस्वीर में छोटा लग रहा था।
+
+![../Blendle's%20Employee%20Handbook%20627043432731449f85bf3624cbc13dc7/History%2029613779691d41b285c27156e574e0cc/jaarbeurs.jpg](../Blendle's%20Employ ee%20हैंडबुक %20627043432731449f85bf3624cbc13dc7/इतिहास%2029613779691d41b285c27156e574e0cc/jaarbeurs.jpg)
+
+**अक्टूबर 26 को 2014** ब्लेंडल ने एक्सल स्प्रिंगर और द न्यूयॉर्क टाइम्स से ****3 मिलियन निवेश की घोषणा की, जो हमारे लिए बहुत बड़ी बात है।
+
+यहां अलेक्जेंडर की प्रेस विज्ञप्ति है: [https://medium.com/on-blendle/today-our-journalistic-startup-got-backed-by-the-new-york-times-and-axel-springer-8857c70832e4] (https://medium.com/on-blendle/today-our-journalistic-startup-got-backed-by-the-new-york-times-and-axel-springer-8857c70832e4)
+
+आरटीएल ने जार्बेर्स स्थित कार्यालय में एलेक्स का साक्षात्कार लिया:
+
+[https://www.notion.so](https://www.notion.so)
+
+**12 मार्च 2015:** न्यूयॉर्क टाइम्स, वॉल स्ट्रीट जर्नल और वाशिंगटन पोस्ट यहां हैं:
+
+[http://www.businessinsider.com/the-new-york-times-wall-street-journal-the-washington-post-sign-up-to-blendle-2015-3?international=true&r=US&IR=T ](http://www.businessinsider.com/the-new-york-times-wall-street-journal-the-washington-post-sign-up-to-blendle-2015-3?international=true&r=US&IR= टी)
+
+**12 सितंबर 2015**: ब्लेंडल डीई लाइव हुआ
+
+मार्टन ने लॉन्च की घोषणा की: [https://medium.com/on-blendle/after-successful-test-blendle-deutschland-to-go-live-in-two-weeks-ffc02a813aa8](https://medium.com/on-blendle/after-successful-test-blendle- ड्यूशलैंड-टू-गो-लिव-इन-टू-वीक्स-ffc02a813aa8)
+
+मार्टन - जर्मन में - लॉन्च के बारे में; -ब्लेंडले/आर्टिकल-कियोस्क-ब्लेंडले-इस्ट-जेटज़्ट-इन-ड्यूशलैंड-लाइव-सीडी8एए855ए9डी9)
+
+**10 दिसंबर 2015**: हम अमेरिका में अपने बीटा ए की घोषणा करते हैं।
+
+[एचटीटीps://medium.com/zu-blendle/europe-s-favorite-journalism-startup-is-coming-to-america-206daa9c912d](https://medium.com/zu-blendle/europe-s-favorite -पत्रकारिता-स्टार्टअप-अमेरिका-206daa9c912d आ रहा है)
+
+[http://www.poynter.org/2015/blendle-the-dutch-itunes-for-news-will-launch-in-the-u-s-early-next-year/388353/](http://www .poynter.org/2015/blendle-the-dutch-itunes-for-news-will-launch-in-the-u-s-early-next-year/388353/)
+
+**1 मार्च 2016:** देशी एंड्रॉइड ऐप का लॉन्च
+
+हमने एक पीआर चीज़ की (जो हमने की थी)।वास्तव में अच्छी तरह से rked): 24 घंटे बीटा।
+
+[https://androidworld.nl/apps/blendle-android-officieel/](https://androidworld.nl/apps/blendle-android-officieel/)
+
+[https://www.bright.nl/app-van-de-week/app-van-de-week-blendle-voor-android](https://www.bright.nl/app-van-de- सप्ताह/ऐप-वैन-डे-वीक-ब्लेंडले-वूर-एंड्रॉइड)
+
+[https://www.villamedia.nl/artikel/blब्लेंडल-लांसर्ट-एंड्रॉइड-ऐप](https://www.villamedia.nl/artikel/blendle-lanceert-android-app)
+
+[https://play.google.com/store/apps/details?id=com.blendle.app&hl=nl](https://play.google.com/store/apps/details?id=com.blendle. ऐप&hl=nl)
+
+**23 मार्च 2016 यूएस बीटा लॉन्च**:
+
+[https://www.notion.so](https://www.notion.so)
+
+वॉल स्ट्रीट जर्नल आइटम:
+
+[https://www.youtube.com/watch?v=ywSsQIOj99c&t=3s](https://www.youtube.com/watch?v=ywSsQIOj99c&t=3s)
+
+फॉक्स: [https://www.youtube.com/watch?v=ljw0icGxF1g](https://www.youtube.com/watch?v=ljw0icGxF1g)
+
+[http://www.nu.nl/internet/4235416/blendle-lanceert-betaversie-in-verenigde-staten.html](http://www.nu.nl/internet/4235416/blendle-lanceert-betaversie- in-verenigde-staten.html)
+
+**अगस्त 2016:** 10 लाख लोगों के पास ब्लेंडल खाता है:
+
+[https://medium.com/on-blendle/one-million-6390860c2a34](https://medium.com/on-blendle/one-million-6390860c2a34)
+
+**दिसंबर 2016:** क्रिसमस पार्टी
+
+![../Blendle's%20Employee%20Handbook%20627043432731449f85bf3624cbc13dc7/History%2029613779691d41b285c27156e574e0cc/Blendlegroupphoto3.jpg](../Blendle's%20Employee%20Handbook%20627043432731449f85bf3624cbc13dc7/History%2029613 779 691डी41बी285सी27156ई574ई0सीसी/ब्लेंडग्रुपफोटो3.जेपीजी)
+
+**12 जनवरी 2017**: प्रीमियम का शुभारंभ:
+
+अलेक्जेंडर ने लॉन्च की घोषणा की: [https://medium.com/@AlexanderNL/we-hebben-het-afgelopen-jaar-in-het-gehem-toegewerkt-naar-dit-moment-vandaag-lanceren-we-blendle-5b10959803a5 ](https://medium.com/@AlexanderNL/we-hebben-het-afgelopen-jaar-in-het-geheimm-toegwerkt-naar-dit-moment-vandaag-lanceren-we-blendle-5b10959803a5)
+
+![../Blendle's%20Employee%20Handbook%20627043432731449f85bf3624cbc13dc7/History%2029613779691d41b285c27156e574e0cc/Schermafbeel ding_2017-05-17_om_14.5 7.4. 0.png](../Blendle's%20Employee%20Handbook%20627043432731449f85bf3624cbc13dc7/History%2029613779691d41b285c27156e574e0cc/Schermafbeelding_2017-05-1 7_ॐ_14 .57.40.png)
+
+विभिन्न प्लेटफ़ॉर्म प्रीमियम पर रिपोर्ट करते हैं
+
+[https://tweakers.net/nieuws/119971/blendle-biedt-abonnementsvorm-met-seselectie-artikelen-voor-tien-euro-per-maand.html](https://tweakers.net/nieuws/119971/blendle-biedt-abonnementsvorm-met-selectie-artikelen-voor-tien-euro-per -maand.html)
+
+उस दिन रिक का व्लॉग:
+
+[https://www.notion.so](https://www.notion.so)
+
+इस व्लॉग में, रिक बताते हैं कि प्रीमियम क्या है: [https://www.youtube.com/watch?v=15gbuy7fkTE](https://www.youtube.com/watch?v=15gbuy7fkTE)
+
+वह GIF जो ऐप में डाला गया था:
+
+[../ब्लेंडले का%20कर्मचारी%20हैंडबुक%20627043432731449f85bf3624cbc13dc7/इतिहास%2029613779691d41b285c27156e574e0cc/M4G7VOqrMT-OrKvtlaYOrLXfDwgRC8C4cIycQAg6qHcH9TXwCIF5M7PIeB_yJPMA.mp4](../Blendle's%20Employee%20Handbook%20627043432 7314 49f85bf3624cbc13dc7/इतिहास%2029613779691d41b285c27156e574e0cc/M4G7VOqrMT-OrKvtlaYOrLXfDwgRC8C4cIycQAg6qH9TXwCIF5M7PIeB_yJPMA.mp4)
+
+**6 अप्रैल 2017:** निक्केई (फाइनेंशियल टाइम्स) और आईएनकेईएफ कैपिटल ने ब्लेंडल में निवेश किया:
+
+[http://www.poynter.org/2017/blendle-the-dutch-itunes-for-news-lands-investment-from-financial-times-owner-nikkei/453341/](http://www.poynterr.org/2017/blendle-the-dutch-itunes-for-news-lands-investment-from-financial-times-owner-nikkei/453341/)
+
+[http://www.nu.nl/internet/4599873/eigenaar-financial-times-investeert-in-digitale-kiosk-blendle.html](http://www.nu.nl/internet/4599873/eigenaa r -financial-times-investeert-in-digitale-kiosk-blendle.html)
+
+[https://startupjuncture.com/2017/04/07/financial-times-invests-blendle/](https://startupjuncture.com/2017/04/07/financial-times-invests-blendle/)
+
+[http://www.quotenet.nl/Nieuws/Bलेंडल-हाल्ट-नीउव-ग्रोएगेल्ड-ऑप-बिज-इंकेफ-कैपिटल-एन-मीडियाकंसर्न-निक्केई-194454](http://www.quotenet.nl/Nieuws/Blendle-haalt-nieuw-groeigeld-op-bij-Inkef -कैपिटल-एन-मीडियाकंसर्न-निक्केई-194454)
+
+**अप्रैल 2017:** ब्लैंकी पीछे हट गया
+
+[http://blog.blendle.io/post/159268405976/naast-zakelijk-nieuws-we-hebben-bij-blendle-weer](http://blog.blendle.io/post/159268405976/naast-zakelijk- नीउज़-वी-हेब्बेन-बिज-ब्लेंडले-वीयर)
+
+[https://www.businessinsider.nl/oprichter-marten-blankesteijn-verlaat-blendle-ik-word-dit-jaar-vader/](https://www.businessinsider.nl/oprichter-marten-blankesteijn-verlaat-blendle-ik-word-dit-jaar-vader/)
+
+**ग्रीष्म 2017:** वजन कम होना
+
+[https://www.emerce.nl/nieuws/blendle-slankt-af](https://www.emerce.nl/nieuws/blendle-slankt-af)
+
+![../Blendle's%20Employee%20Handbook%20627043432731449f85bf3624cbc13dc7/Histo ry%2029613779691d41b285c27156e574e0cc/Schermafbeelding2018-06-19om09.52. 45 .png](../Blendle's%20Employee%20Handbook%20627043432731449f85bf3624cbc13dc7/History%2029613779691d41b285c27156e574e0cc/Schermafbeelding2018-06-19om09.52.45.png)
+
+**सितंबर 2017:** मोरक्को में काम और सर्फ यात्रा
+
+![../Blendle's%20Employee%20Handbook%20627043432731449f85bf3624cbc13dc7/History%2029613779691d41b285c27156e574e0cc/workandsurftripmaroc.jpgEmployee](../Blendle's %20%20H औरपुस्तक%20627043432731449f85bf3624cbc13dc7/इतिहास%2029613779691d41b285c27156e574e0cc/workandsurftripmaroc.jpg)
+
+**Q3 और Q4 2017:** उत्पाद को बेहतर बनाने पर कड़ी मेहनत कर रहे हैं
+
+**11 जनवरी 2018:** ऑडियो लॉन्च
+
+सिकंदरियामैं ब्लेंडल ऑडियो (डच) समझा रहा हूं:
+
+[https://youtu.be/D3QtwXbTPGo](https://youtu.be/D3QtwXbTPGo)
+
+पर्दे के पीछे:
+
+![../Blendle's%20Employee%20Handbook%20627043432731449f85bf3624cbc13dc7/History%2029613779691d41b285c27156e574e0cc/audio3.jpg](../Blendle's%20Employee% 20हैंडबुक%2 0627043432731449f85bf3624cbc13dc7/इतिहास%2029613779691d41b285c27156e574e0cc/audio3.jpg)
+
+पहले 'स्टूडियो' में जेरोइन ने 500 बार हे *FNAME* कहा।
+
+![../Blendle's%20Employee%20Handbook%20627043432731449f85bf3624cbc13dc7/History%2029613779691d41b285c27156e574e0cc/audio1.jpg](../Blendle's%20Employee%20Handbook%20627043432731449f85bf3624cbc13dc7/History%2029613 7796 91d41b285c27156e574e0cc/audio1.jpg)
+
+**फरवरी 2018:** अच्छे अंक:
+
+[https://medium.com/@AlexanderNL/gebruik-van-blendle-groeide-71-in-2017-blendle-start-eerste-grote-reclamecampagne-bfacb326ef84](https://medium.com/@AlexanderNL/ उपयोग-वान-ब्लेंडले-ग्रोएड-71-इन-2017-ब्लेंडले-स्टार्ट-ईर्स्ट-ग्रोटे-रिक्लेमकैम्पेन-बीएफएसीबी326ईएफ84)
+
+**फरवरी 2018:** एफपहला बड़ा विपणन अभियान
+
+व्यावसायिक:
+
+[https://www.youtube.com/watch?v=H0snvmuXDVc](https://www.youtube.com/watch?v=H0snvmuXDVc)
+
+अब्री (आउटडोर) अभियान:
+
+**मार्च 2018:** टर्शेलिंग में सप्ताहांत।
+
+![../Blendle's%20Employee%20Handbook%20627043432731449f85bf3624cbc13dc7/History%2029613779691d41b285c27156e574e0cc/weekendje.jpg](../Blendle's%20Employee% 20हैंडबुक%2 0627043432731449f85bf3624cbc13dc7/इतिहास%2029613779691d41b285c27156e574e0cc/weekendje.jpg)
+
+**मई 2018:** 4 मिलियन यूरो का निवेश:
+
+[https://medium.com/@AlexanderNL/investing-van-4-miljoen-voor-blendle-a927b9bca4ef](https://medium.com/@AlexanderNL/investing-van-4-miljoen-voor-blendle- a927b9bca4ef)
+
+[https://www.businessinsider.nl/blendle-alexander-klopping-investing-morten-strunge/](https://www.businessinsider.nl/blendle-alexander-klopping-investing-morten-strunge/)
+
+————-
+
+गौडेन पेन में यूवीएनएल
+
+[http://www.nu.nl/media/4232234/laatste-interview-joost-zwagerman-meest-gelezen-blendle-in-2015.html](http://www.nu.nl/media/4232234/laatste-interview-joost-zwagerman-meest-gelezen-blendle-in-2015.html)
+
+[http://nos.nl/artigel/2022756-journalist-olaf-koens-wint-gouden-pen-voor-artigel-mh17.html](http://nos.nl/artigel/2022756-journalist-olaf- koens-wint-gouden-pen-voor-artikel-mh17.html)
+
+ब्लेंडल ट्रेंडिंग लाइव: [https://medium.com/on-blendle/blendle-trending-design-details-61c5c64ac6aa](https://medium.com/on-blendle/blendle-trending-design-details-61c5c64ac6aa)
+
+देशी आईओएस ऐप लॉन्च
+
+डीई लॉन्च:
+लॉन पर मार्टनch: [https://medium.com/on-blendle/pay-per-story-platform-blendle-goes-live-in-germany-37b53dbf360b](https://medium.com/on-blendle/pay- प्रति-कहानी-प्लेटफ़ॉर्म-मिश्रण-जर्मनी-37बी53डीबीएफ360बी में लाइव होता है)
+
+**पुरस्कार/मूल्य/प्रशंसा**
+
+डच डिज़ाइन पुरस्कार
+
+[https://www.dutchdesignawards.nl/nl/gallery/service-systems/blendle/](https://www.dutchdesignawards.nl/nl/gallery/service-systems/blendle/)
+
+मर्कुर डी'ओर 2016:
+
+[https://www.youtube.com/watch?v=DrJkY1oD_as](https://www.youtube.com/watch?v=DrJkY1oD_as)
+
+मैंसंस्कृति पुरस्कार 2014 (आईओएस, ब्लेंडल ट्रेंडिंग): प्रथम स्थान सर्वश्रेष्ठ नवागंतुक 2014: [http://www.adformatie.nl/nieuws/iculture-awards-2014-voor-de-beste-apps-van-2014-bekend]( http://www.adformatie.nl/nieuws/iculture-awards-2014-voor-de-beste-apps-van-2014-bekend) और [https://www.iculture.nl/iculture-awards/2014- पुरस्कार/](https://www.iculture.nl/iculture-awards/2014-awards/)
+
+आईकल्चर पुरस्कार 2015 (आईओएस, ब्लेंडल ट्रेंडिंग): सर्वश्रेष्ठ डच ऐप के लिए तीसरा स्थान: [https://www.iculture.nl/iculture-awards/2015-awards/#beste_nl2015](https://www.iculture.nl/iculture-awards/2015-awards/#beste_nl2015)
+
+आईकल्चर पुरस्कार 2016 (आईओएस, ब्लेंडल ऐप): प्रथम स्थान सर्वश्रेष्ठ डच ऐप 2016: [https://www.iculture.nl/iculture-awards/#beste_nl2016](https://www.iculture.nl/iculture-awards/ #best_nl2016)
+
+2016: गेम चेंजर पुरस्कार: [https://www.ecommercenews.nl/thuiswingel-awards-2016-bolcom-beste-webwingel/](https://www.ecommercenews.nl/thuiswingel-awards-2016-bolcom-beste -वेबविंकेल/) और [http://m.thuiswinkelawards.nl/nl/wat-kan-ik-winnen/vakprijs-game-changer-award](http://m.thuiswinkelawards.nl/nl/wat-kan-ik-winnen/vakprijs-game-changer-award)
+
+**ब्लेंड लोगों की बातचीत:**
+
+वास्तुकला पर कोएन बोलेन
+
+[https://www.youtube.com/watch?v=oid1raHVjoQ](https://www.youtube.com/watch?v=oid1raHVjoQ)
+
+कुबेरनेट्स पर कोएन बोलेन (हमारा वर्तमान बुनियादी ढांचा)
+
+[https://www.youtube.com/watch?v=-Ypxg7tlYCI](https://www.youtube.com/watch?v=-Ypxg7tlYCI)
+
+हेडलाइंस के पीछे डेटा पर जेफरी:
+
+[https://www.youtube.com/watch?v=WgGhLfRTTwc](https://www.youtube.com/watch?v=WgGhLfRTTwc)
+
+एरिक टेक्सचर के साथ सहज और प्रतिक्रियाशील यूआई बनाने पर
+
+[https://www.youtube.com/watch?v=XA_NkUbu9WA](https://www.youtube.com/watch?v=XA_NkUbu9WA)
+
+**अच्छी साझेदारियाँ**
+
+एन एस
+
+VODAFONE
+
+**मजेदार/शानदार/रोचक लेख/वीडियो/तस्वीरें**
+
+सोमवार नोट से फ्रेडरिक फ़िलौक्स: [https://mondaynote.com/blendle-is-up-to-something-big-568d82e249d](https://mondaynote.com/blendle-is-up-to-something-big- 568d82e249d)
+
+[https://nieuwejournalistiek.nl/startup-blendle/2015/02/06/ze-komen-in-onze-kranten-knippen/](https://nieuwejournalistiek.nl/startup-blendle/2015/02/06/ze-komen-in-onze-kranten-knippen/)
+
+अलेक्जेंडर 1 साल बाद एनएल में रहते हैं: [https://medium.com/on-blendle/blendle-a-radical-experiment-with-micro payments-in-journalism-365-days-later-f3b799022edc](https:// मीडियम.com/on-blendle/blendle-a-radical-experiment-with-micro payment-in-journalism-365-days-later-f3b799022edc) और जर्मन में: [https://medium.com/zu-blendle/blendle -7c5f55c75c3d](https://medium.com/zu-bलेंडल/ब्लेंडले-7c5f55c75c3d)
+
+जारजोर ने बताया कि जब उन्होंने जर्मनों से पत्रकारिता के लिए भुगतान करने को कहा तो क्या हुआ: [https://medium.com/zu-blendle/zwei-charts-wie-keine-anderen-oder-was-passiert-wenn-man-menschen-f %C3%BCr-journalismus-um-geld-86973e2403e7](https://medium.com/zu-blendle/zwei-charts-wie-keine-anderen-oder-was-passiert-wenn-man-menschen-f% C3%BCr-पत्रकारिता-उम-गेल्ड-86973e2403e7)
+
+मार्टन, इस तथ्य पर कि जर्मनी अच्छा कर रहा है: [https://medium.com/zu-blendle/artigel-kiosk-blendle-w%C3%A4chst-in-deutschland-viermal-schneller-als-in-holland-6abd949935a8](https://medium.com/zu-blendle/artigel-kiosk-blendle-w%C3%A4chst-in-deutschland-viermal-schneller-als- इन-हॉलैंड-6abd949935a8)
+
+2014 में जोर्ट ने बताया कि हमने पत्रकारिता के आईट्यून्स को कैसे डिज़ाइन किया: [https://medium.com/@jortdevries/how-we-designed-the-itunes-of-journalism-46bf61c9e603](https://medium.com/@ jortdevries/हमने पत्रकारिता के आईट्यून्स को कैसे डिज़ाइन किया-46bf61c9e603)
+
+TNW सम्मेलन: [https://www.youtube.com/watch?v=qDaT8SEBPG0](https://www.youtube.com/watch?v=qDaT8SEBPG0ch?v=qDaT8SEBPG0)
+
+यह ब्लेंडल वीडियो एनएल है: [https://www.youtube.com/watch?v=UZj58jnBz1A](https://www.youtube.com/watch?v=UZj58jnBz1A)
+
+यह एक ब्लेंड वीडियो है: [https://www.youtube.com/watch?v=srblsKNceuk](https://www.youtube.com/watch?v=srblsKNceuk)
+
+DWDD माइक्रोपेमेंट: [https://www.youtube.com/watch?v=oid1raHVjoQ](https://www.youtube.com/watch?v=oid1raHVjoQ)
+
+आरटीएल नया निवेश: [https://www.youtube.com/watch?v=3q3vVKIq6Lk](https://www.youtube.com/watch?v=3q3vVKIq6Lk)
+
+रिपोर्टिंग बिजलॉन्च: [https://www.youtube.com/watch?v=fEGmkpF57a0](https://www.youtube.com/watch?v=fEGmkpF57a0)
+
+हैट बी रिचटजेस:
+
+[http://www.adformatie.nl/blog/zeepbel-blendle-loopt-leeg](http://www.adformatie.nl/blog/zeepbel-blendle-loopt-leeg) (डच)
+
+वर्ट्रेक एनआरसी
+
+[http://daskapital.nl/2017/03/luidt_nrc_het_einde_van_blendl.html](http://daskapital.nl/2017/03/luidt_nrc_het_einde_van_blendl.html) (डच)
+
+[https://www.nrc.nl/nieuws/2017/03/07/waarom-nrc-stopt-met-blendle-a1549164](https://www.nrc.nl/nieuws/2017/03/07/waarom-nrc-stopt-met-blendle-a1549164) (डच)
+
+[http://www.quotenet.nl/Nieuws/Dit-is-waarom-Quote-anders-dan-NRC-wel-bij-Blendle-blijft-192789](http://www.quotenet.nl/Nieuws/ यह-इस-वारोम-उद्धरण-एंडर्स-दान-एनआरसी-वेल-बिज-ब्लेंडले-ब्लिजफ़्ट-192789)
+
+[https://speld.nl/2017/03/08/nrc-stopt-blendle-gemakkelijk-omzeilen-betaalmuur-is-toekomst/](https://speld.nl/2017/03/08/nrc-stopt -ब्लेंडले-गेमकेलिज्क-ओमज़ेइलन-बीटाअल्मुउर-इज़-टूकोमस्ट/)
+
+**सामान्य स्रोत:**
+
+[http://blog.blendle.io/संग्रह](http://blog.blendle.io/archive)
+
+[https://nieuwejournalistiek.nl/startup-blendle/](https://nieuwejournalistiek.nl/startup-blendle/) (डच)
+
+---
+
+#ब्लेंडले पर काम करें
+
+यदि आप ब्लेंडल में काम करना चाहते हैं तो आप हमारे [नौकरी विज्ञापन यहां] (https://blendle.homerun.co/) देख सकते हैं दृश्य न्यूज़लेटर](https://blendle.homerun.co/yes-keep-me-posted/tr/apply?token=8092d4128c306003d97dd3821 Bad06f2)
