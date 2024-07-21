@@ -1,0 +1,29 @@
+- Table of Contents
+- Chapter 1 Introduction to Large Models
+- [1. Introduction to Large Language Model LLM Theory](C1/1. Introduction to Large Language Model%20LLM%20Theory.md)
+- [2. Introduction to Retrieval Enhanced Generation RAG](C1/2. Introduction to Retrieval Enhanced Generation%20RAG%20.md)
+- [3. Introduction to LangChain](C1/3. Introduction to LangChain%20.md)
+- [4. The overall process of developing LLM applications](C1/4. The overall process of developing%20LLM%20 applications.md)
+- [5. Alibaba Cloud Server Usage Guide](C1/5. Basic Usage of Alibaba Cloud Server.md)
+- [6. Basic Usage of GitHub Codespaces (Elective)](./C1/6. Basic Usage of GitHub%20Codespaces%20 (Elective).md)
+- [7. Environment Configuration](./C1/7.Environment Configuration.md)
+- Chapter 2 Using LLM API to Develop Applications
+- [1. Basic Concepts](C2/1.%20Basic Concepts.md)
+- [2. Using LLM APII](C2/2.%20Using%20LLM%20API.md)
+- [3. Prompt Engineering](C2/3.%20Prompt%20Engineering.md)
+- Chapter 3 Building Knowledge Base
+- [1. Introduction to word vectors and vector knowledge base](C3/1. Introduction to word vectors and vector knowledge base.md)
+- [2. Using Embedding API](C3/2. Using%20Embedding%20API.md)
+- [3. Data processing](C3/3. Data processing.md)
+- [4. Building and using vector database](C3/4. Building and using vector database.md)
+- [Appendix. LangChain custom Embedding explanation](C3/Appendix LangChain custom Embedding package explanation.md)
+- Chapter 4 Building RAG application
+- [1. LLM access LangChain](C4/1.LLM%20Access%20LangChain.md)
+-[2. Build a search question and answer chain](C4/2. Build a search question and answer chain.md)- [3. Deployment of Knowledge Base Assistant](C4/3. Deployment of Knowledge Base Assistant.md)
+- Chapter 5 System Evaluation and Optimization
+- [1. How to evaluate LLM applications](C5/1. How to evaluate%20LLM%20 applications.md)
+- [2. Evaluate and optimize the generation part](C5/2. Evaluate and optimize the generation part.md)
+- [3. Evaluate and optimize the retrieval part](C5/3. Evaluate and optimize the retrieval part.md)
+- Chapter 6 Selected Case Studies of LLM Applications
+- [Case 1: Personal Knowledge Base Assistant](C6/Case 1: Personal Knowledge Base Assistant.md)
+- [Case 2: Human Relationships and Worldly Sophistication Model](C6/Case 2: Human Relationships and Worldly Sophistication Model System-Tianji.md)
